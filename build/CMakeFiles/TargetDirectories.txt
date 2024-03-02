@@ -1,4 +1,14 @@
-/home/mz/workspace/AlphaMin/build/CMakeFiles/rebuild_cache.dir
 /home/mz/workspace/AlphaMin/build/CMakeFiles/edit_cache.dir
 /home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir
 /home/mz/workspace/AlphaMin/build/CMakeFiles/alpha.dir
+/home/mz/workspace/AlphaMin/build/CMakeFiles/test_log.dir
+/home/mz/workspace/AlphaMin/build/CMakeFiles/test_fiber.dir
+/home/mz/workspace/AlphaMin/build/CMakeFiles/test_scheduler.dir
+/home/mz/workspace/AlphaMin/build/CMakeFiles/test_iomanager.dir
+/home/mz/workspace/AlphaMin/build/CMakeFiles/test_boost.dir
+/home/mz/workspace/AlphaMin/build/CMakeFiles/test_address.dir
+/home/mz/workspace/AlphaMin/build/CMakeFiles/test_bytearray.dir
+/home/mz/workspace/AlphaMin/build/CMakeFiles/test_hook.dir
+/home/mz/workspace/AlphaMin/build/CMakeFiles/rebuild_cache.dir
+/home/mz/workspace/AlphaMin/build/CMakeFiles/test_thread.dir
+/home/mz/workspace/AlphaMin/build/CMakeFiles/test_socket.dir

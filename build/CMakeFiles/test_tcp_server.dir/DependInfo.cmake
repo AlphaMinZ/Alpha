@@ -4,32 +4,30 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mz/workspace/AlphaMin/src/address.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/address.cc.o"
-  "/home/mz/workspace/AlphaMin/src/bytearray.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/bytearray.cc.o"
-  "/home/mz/workspace/AlphaMin/src/config.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/config.cc.o"
-  "/home/mz/workspace/AlphaMin/src/env.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/env.cc.o"
-  "/home/mz/workspace/AlphaMin/src/fd_manager.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.o"
-  "/home/mz/workspace/AlphaMin/src/fiber.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/fiber.cc.o"
-  "/home/mz/workspace/AlphaMin/src/hook.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/hook.cc.o"
-  "/home/mz/workspace/AlphaMin/src/iomanager.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/iomanager.cc.o"
-  "/home/mz/workspace/AlphaMin/src/log.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/log.cc.o"
-  "/home/mz/workspace/AlphaMin/src/mutex.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/mutex.cc.o"
-  "/home/mz/workspace/AlphaMin/src/scheduler.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/scheduler.cc.o"
-  "/home/mz/workspace/AlphaMin/src/socket.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/socket.cc.o"
-  "/home/mz/workspace/AlphaMin/src/stream.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/stream.cc.o"
-  "/home/mz/workspace/AlphaMin/src/tcp_server.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.o"
-  "/home/mz/workspace/AlphaMin/src/thread.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/thread.cc.o"
-  "/home/mz/workspace/AlphaMin/src/timer.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/timer.cc.o"
-  "/home/mz/workspace/AlphaMin/src/util.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/src/util.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/address.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/address.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/bytearray.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/config.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/config.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/env.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/env.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/fd_manager.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/fiber.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/hook.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/hook.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/iomanager.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/log.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/log.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/mutex.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/scheduler.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/socket.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/socket.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/stream.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/stream.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/tcp_server.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/thread.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/thread.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/timer.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/timer.cc.o"
+  "/home/mz/workspace/AlphaMin/alpha/util.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/alpha/util.cc.o"
   "/home/mz/workspace/AlphaMin/tests/test_tcp_server.cc" "/home/mz/workspace/AlphaMin/build/CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  ".././inc"
-  "../inc/http"
-  "../inc/streams"
+  ".././alpha"
   )
 
 # Targets to which this target links.

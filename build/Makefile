@@ -73,17 +73,6 @@ CMAKE_BINARY_DIR = /home/mz/workspace/AlphaMin/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -94,6 +83,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -153,515 +153,1398 @@ alpha/fast:
 	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/build
 .PHONY : alpha/fast
 
-src/address.o: src/address.cc.o
+#=============================================================================
+# Target rules for targets named test_log
 
-.PHONY : src/address.o
+# Build rule for target.
+test_log: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_log
+.PHONY : test_log
 
-# target to build an object file
-src/address.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/address.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/address.cc.o
-.PHONY : src/address.cc.o
+# fast build rule for target.
+test_log/fast:
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/build
+.PHONY : test_log/fast
 
-src/address.i: src/address.cc.i
+#=============================================================================
+# Target rules for targets named test_fiber
 
-.PHONY : src/address.i
+# Build rule for target.
+test_fiber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
 
-# target to preprocess a source file
-src/address.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/address.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/address.cc.i
-.PHONY : src/address.cc.i
+# fast build rule for target.
+test_fiber/fast:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
 
-src/address.s: src/address.cc.s
+#=============================================================================
+# Target rules for targets named test_scheduler
 
-.PHONY : src/address.s
+# Build rule for target.
+test_scheduler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
+.PHONY : test_scheduler
 
-# target to generate assembly for a file
-src/address.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/address.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/address.cc.s
-.PHONY : src/address.cc.s
+# fast build rule for target.
+test_scheduler/fast:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
+.PHONY : test_scheduler/fast
 
-src/bytearray.o: src/bytearray.cc.o
+#=============================================================================
+# Target rules for targets named test_iomanager
 
-.PHONY : src/bytearray.o
+# Build rule for target.
+test_iomanager: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
+.PHONY : test_iomanager
 
-# target to build an object file
-src/bytearray.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/bytearray.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/bytearray.cc.o
-.PHONY : src/bytearray.cc.o
+# fast build rule for target.
+test_iomanager/fast:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
+.PHONY : test_iomanager/fast
 
-src/bytearray.i: src/bytearray.cc.i
+#=============================================================================
+# Target rules for targets named test_boost
 
-.PHONY : src/bytearray.i
+# Build rule for target.
+test_boost: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_boost
+.PHONY : test_boost
 
-# target to preprocess a source file
-src/bytearray.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/bytearray.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/bytearray.cc.i
-.PHONY : src/bytearray.cc.i
+# fast build rule for target.
+test_boost/fast:
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/build
+.PHONY : test_boost/fast
 
-src/bytearray.s: src/bytearray.cc.s
+#=============================================================================
+# Target rules for targets named test_address
 
-.PHONY : src/bytearray.s
+# Build rule for target.
+test_address: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_address
+.PHONY : test_address
 
-# target to generate assembly for a file
-src/bytearray.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/bytearray.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/bytearray.cc.s
-.PHONY : src/bytearray.cc.s
+# fast build rule for target.
+test_address/fast:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
+.PHONY : test_address/fast
 
-src/config.o: src/config.cc.o
+#=============================================================================
+# Target rules for targets named test_bytearray
 
-.PHONY : src/config.o
+# Build rule for target.
+test_bytearray: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_bytearray
+.PHONY : test_bytearray
 
-# target to build an object file
-src/config.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/config.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/config.cc.o
-.PHONY : src/config.cc.o
+# fast build rule for target.
+test_bytearray/fast:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/build
+.PHONY : test_bytearray/fast
 
-src/config.i: src/config.cc.i
+#=============================================================================
+# Target rules for targets named test_hook
 
-.PHONY : src/config.i
+# Build rule for target.
+test_hook: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
 
-# target to preprocess a source file
-src/config.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/config.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/config.cc.i
-.PHONY : src/config.cc.i
+# fast build rule for target.
+test_hook/fast:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
 
-src/config.s: src/config.cc.s
+#=============================================================================
+# Target rules for targets named test_thread
 
-.PHONY : src/config.s
+# Build rule for target.
+test_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
 
-# target to generate assembly for a file
-src/config.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/config.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/config.cc.s
-.PHONY : src/config.cc.s
+# fast build rule for target.
+test_thread/fast:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
 
-src/env.o: src/env.cc.o
+#=============================================================================
+# Target rules for targets named test_socket
 
-.PHONY : src/env.o
+# Build rule for target.
+test_socket: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_socket
+.PHONY : test_socket
 
-# target to build an object file
-src/env.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/env.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/env.cc.o
-.PHONY : src/env.cc.o
+# fast build rule for target.
+test_socket/fast:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+.PHONY : test_socket/fast
 
-src/env.i: src/env.cc.i
+alpha/address.o: alpha/address.cc.o
 
-.PHONY : src/env.i
-
-# target to preprocess a source file
-src/env.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/env.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/env.cc.i
-.PHONY : src/env.cc.i
-
-src/env.s: src/env.cc.s
-
-.PHONY : src/env.s
-
-# target to generate assembly for a file
-src/env.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/env.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/env.cc.s
-.PHONY : src/env.cc.s
-
-src/fd_manager.o: src/fd_manager.cc.o
-
-.PHONY : src/fd_manager.o
-
-# target to build an object file
-src/fd_manager.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/fd_manager.cc.o
-.PHONY : src/fd_manager.cc.o
-
-src/fd_manager.i: src/fd_manager.cc.i
-
-.PHONY : src/fd_manager.i
-
-# target to preprocess a source file
-src/fd_manager.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/fd_manager.cc.i
-.PHONY : src/fd_manager.cc.i
-
-src/fd_manager.s: src/fd_manager.cc.s
-
-.PHONY : src/fd_manager.s
-
-# target to generate assembly for a file
-src/fd_manager.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/fd_manager.cc.s
-.PHONY : src/fd_manager.cc.s
-
-src/fiber.o: src/fiber.cc.o
-
-.PHONY : src/fiber.o
+.PHONY : alpha/address.o
 
 # target to build an object file
-src/fiber.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/fiber.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/fiber.cc.o
-.PHONY : src/fiber.cc.o
+alpha/address.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/address.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/address.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/address.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/address.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/address.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/address.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/address.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/address.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/address.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/address.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/address.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/address.cc.o
+.PHONY : alpha/address.cc.o
 
-src/fiber.i: src/fiber.cc.i
+alpha/address.i: alpha/address.cc.i
 
-.PHONY : src/fiber.i
+.PHONY : alpha/address.i
 
 # target to preprocess a source file
-src/fiber.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/fiber.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/fiber.cc.i
-.PHONY : src/fiber.cc.i
+alpha/address.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/address.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/address.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/address.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/address.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/address.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/address.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/address.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/address.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/address.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/address.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/address.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/address.cc.i
+.PHONY : alpha/address.cc.i
 
-src/fiber.s: src/fiber.cc.s
+alpha/address.s: alpha/address.cc.s
 
-.PHONY : src/fiber.s
+.PHONY : alpha/address.s
 
 # target to generate assembly for a file
-src/fiber.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/fiber.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/fiber.cc.s
-.PHONY : src/fiber.cc.s
+alpha/address.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/address.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/address.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/address.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/address.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/address.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/address.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/address.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/address.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/address.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/address.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/address.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/address.cc.s
+.PHONY : alpha/address.cc.s
 
-src/hook.o: src/hook.cc.o
+alpha/bytearray.o: alpha/bytearray.cc.o
 
-.PHONY : src/hook.o
+.PHONY : alpha/bytearray.o
 
 # target to build an object file
-src/hook.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/hook.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/hook.cc.o
-.PHONY : src/hook.cc.o
+alpha/bytearray.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/bytearray.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/bytearray.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/bytearray.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/bytearray.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/bytearray.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/bytearray.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/bytearray.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/bytearray.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/bytearray.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/bytearray.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/bytearray.cc.o
+.PHONY : alpha/bytearray.cc.o
 
-src/hook.i: src/hook.cc.i
+alpha/bytearray.i: alpha/bytearray.cc.i
 
-.PHONY : src/hook.i
+.PHONY : alpha/bytearray.i
 
 # target to preprocess a source file
-src/hook.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/hook.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/hook.cc.i
-.PHONY : src/hook.cc.i
+alpha/bytearray.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/bytearray.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/bytearray.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/bytearray.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/bytearray.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/bytearray.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/bytearray.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/bytearray.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/bytearray.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/bytearray.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/bytearray.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/bytearray.cc.i
+.PHONY : alpha/bytearray.cc.i
 
-src/hook.s: src/hook.cc.s
+alpha/bytearray.s: alpha/bytearray.cc.s
 
-.PHONY : src/hook.s
+.PHONY : alpha/bytearray.s
 
 # target to generate assembly for a file
-src/hook.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/hook.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/hook.cc.s
-.PHONY : src/hook.cc.s
+alpha/bytearray.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/bytearray.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/bytearray.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/bytearray.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/bytearray.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/bytearray.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/bytearray.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/bytearray.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/bytearray.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/bytearray.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/bytearray.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/bytearray.cc.s
+.PHONY : alpha/bytearray.cc.s
 
-src/iomanager.o: src/iomanager.cc.o
+alpha/config.o: alpha/config.cc.o
 
-.PHONY : src/iomanager.o
+.PHONY : alpha/config.o
 
 # target to build an object file
-src/iomanager.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/iomanager.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/iomanager.cc.o
-.PHONY : src/iomanager.cc.o
+alpha/config.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/config.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/config.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/config.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/config.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/config.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/config.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/config.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/config.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/config.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/config.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/config.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/config.cc.o
+.PHONY : alpha/config.cc.o
 
-src/iomanager.i: src/iomanager.cc.i
+alpha/config.i: alpha/config.cc.i
 
-.PHONY : src/iomanager.i
+.PHONY : alpha/config.i
 
 # target to preprocess a source file
-src/iomanager.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/iomanager.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/iomanager.cc.i
-.PHONY : src/iomanager.cc.i
+alpha/config.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/config.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/config.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/config.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/config.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/config.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/config.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/config.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/config.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/config.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/config.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/config.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/config.cc.i
+.PHONY : alpha/config.cc.i
 
-src/iomanager.s: src/iomanager.cc.s
+alpha/config.s: alpha/config.cc.s
 
-.PHONY : src/iomanager.s
+.PHONY : alpha/config.s
 
 # target to generate assembly for a file
-src/iomanager.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/iomanager.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/iomanager.cc.s
-.PHONY : src/iomanager.cc.s
+alpha/config.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/config.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/config.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/config.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/config.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/config.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/config.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/config.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/config.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/config.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/config.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/config.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/config.cc.s
+.PHONY : alpha/config.cc.s
 
-src/log.o: src/log.cc.o
+alpha/env.o: alpha/env.cc.o
 
-.PHONY : src/log.o
+.PHONY : alpha/env.o
 
 # target to build an object file
-src/log.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/log.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/log.cc.o
-.PHONY : src/log.cc.o
+alpha/env.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/env.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/env.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/env.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/env.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/env.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/env.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/env.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/env.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/env.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/env.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/env.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/env.cc.o
+.PHONY : alpha/env.cc.o
 
-src/log.i: src/log.cc.i
+alpha/env.i: alpha/env.cc.i
 
-.PHONY : src/log.i
+.PHONY : alpha/env.i
 
 # target to preprocess a source file
-src/log.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/log.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/log.cc.i
-.PHONY : src/log.cc.i
+alpha/env.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/env.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/env.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/env.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/env.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/env.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/env.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/env.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/env.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/env.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/env.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/env.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/env.cc.i
+.PHONY : alpha/env.cc.i
 
-src/log.s: src/log.cc.s
+alpha/env.s: alpha/env.cc.s
 
-.PHONY : src/log.s
+.PHONY : alpha/env.s
 
 # target to generate assembly for a file
-src/log.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/log.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/log.cc.s
-.PHONY : src/log.cc.s
+alpha/env.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/env.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/env.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/env.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/env.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/env.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/env.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/env.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/env.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/env.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/env.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/env.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/env.cc.s
+.PHONY : alpha/env.cc.s
 
-src/mutex.o: src/mutex.cc.o
+alpha/fd_manager.o: alpha/fd_manager.cc.o
 
-.PHONY : src/mutex.o
+.PHONY : alpha/fd_manager.o
 
 # target to build an object file
-src/mutex.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/mutex.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/mutex.cc.o
-.PHONY : src/mutex.cc.o
+alpha/fd_manager.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/fd_manager.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/fd_manager.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/fd_manager.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/fd_manager.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/fd_manager.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/fd_manager.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/fd_manager.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/fd_manager.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/fd_manager.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/fd_manager.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/fd_manager.cc.o
+.PHONY : alpha/fd_manager.cc.o
 
-src/mutex.i: src/mutex.cc.i
+alpha/fd_manager.i: alpha/fd_manager.cc.i
 
-.PHONY : src/mutex.i
+.PHONY : alpha/fd_manager.i
 
 # target to preprocess a source file
-src/mutex.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/mutex.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/mutex.cc.i
-.PHONY : src/mutex.cc.i
+alpha/fd_manager.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/fd_manager.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/fd_manager.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/fd_manager.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/fd_manager.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/fd_manager.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/fd_manager.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/fd_manager.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/fd_manager.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/fd_manager.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/fd_manager.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/fd_manager.cc.i
+.PHONY : alpha/fd_manager.cc.i
 
-src/mutex.s: src/mutex.cc.s
+alpha/fd_manager.s: alpha/fd_manager.cc.s
 
-.PHONY : src/mutex.s
+.PHONY : alpha/fd_manager.s
 
 # target to generate assembly for a file
-src/mutex.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/mutex.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/mutex.cc.s
-.PHONY : src/mutex.cc.s
+alpha/fd_manager.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/fd_manager.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/fd_manager.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/fd_manager.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/fd_manager.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/fd_manager.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/fd_manager.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/fd_manager.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/fd_manager.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/fd_manager.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/fd_manager.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/fd_manager.cc.s
+.PHONY : alpha/fd_manager.cc.s
 
-src/scheduler.o: src/scheduler.cc.o
+alpha/fiber.o: alpha/fiber.cc.o
 
-.PHONY : src/scheduler.o
+.PHONY : alpha/fiber.o
 
 # target to build an object file
-src/scheduler.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/scheduler.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/scheduler.cc.o
-.PHONY : src/scheduler.cc.o
+alpha/fiber.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/fiber.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/fiber.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/fiber.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/fiber.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/fiber.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/fiber.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/fiber.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/fiber.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/fiber.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/fiber.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/fiber.cc.o
+.PHONY : alpha/fiber.cc.o
 
-src/scheduler.i: src/scheduler.cc.i
+alpha/fiber.i: alpha/fiber.cc.i
 
-.PHONY : src/scheduler.i
+.PHONY : alpha/fiber.i
 
 # target to preprocess a source file
-src/scheduler.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/scheduler.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/scheduler.cc.i
-.PHONY : src/scheduler.cc.i
+alpha/fiber.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/fiber.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/fiber.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/fiber.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/fiber.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/fiber.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/fiber.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/fiber.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/fiber.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/fiber.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/fiber.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/fiber.cc.i
+.PHONY : alpha/fiber.cc.i
 
-src/scheduler.s: src/scheduler.cc.s
+alpha/fiber.s: alpha/fiber.cc.s
 
-.PHONY : src/scheduler.s
+.PHONY : alpha/fiber.s
 
 # target to generate assembly for a file
-src/scheduler.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/scheduler.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/scheduler.cc.s
-.PHONY : src/scheduler.cc.s
+alpha/fiber.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/fiber.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/fiber.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/fiber.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/fiber.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/fiber.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/fiber.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/fiber.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/fiber.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/fiber.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/fiber.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/fiber.cc.s
+.PHONY : alpha/fiber.cc.s
 
-src/socket.o: src/socket.cc.o
+alpha/hook.o: alpha/hook.cc.o
 
-.PHONY : src/socket.o
+.PHONY : alpha/hook.o
 
 # target to build an object file
-src/socket.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/socket.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/socket.cc.o
-.PHONY : src/socket.cc.o
+alpha/hook.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/hook.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/hook.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/hook.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/hook.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/hook.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/hook.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/hook.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/hook.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/hook.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/hook.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/hook.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/hook.cc.o
+.PHONY : alpha/hook.cc.o
 
-src/socket.i: src/socket.cc.i
+alpha/hook.i: alpha/hook.cc.i
 
-.PHONY : src/socket.i
+.PHONY : alpha/hook.i
 
 # target to preprocess a source file
-src/socket.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/socket.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/socket.cc.i
-.PHONY : src/socket.cc.i
+alpha/hook.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/hook.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/hook.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/hook.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/hook.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/hook.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/hook.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/hook.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/hook.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/hook.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/hook.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/hook.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/hook.cc.i
+.PHONY : alpha/hook.cc.i
 
-src/socket.s: src/socket.cc.s
+alpha/hook.s: alpha/hook.cc.s
 
-.PHONY : src/socket.s
+.PHONY : alpha/hook.s
 
 # target to generate assembly for a file
-src/socket.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/socket.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/socket.cc.s
-.PHONY : src/socket.cc.s
+alpha/hook.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/hook.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/hook.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/hook.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/hook.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/hook.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/hook.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/hook.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/hook.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/hook.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/hook.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/hook.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/hook.cc.s
+.PHONY : alpha/hook.cc.s
 
-src/stream.o: src/stream.cc.o
+alpha/iomanager.o: alpha/iomanager.cc.o
 
-.PHONY : src/stream.o
+.PHONY : alpha/iomanager.o
 
 # target to build an object file
-src/stream.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/stream.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/stream.cc.o
-.PHONY : src/stream.cc.o
+alpha/iomanager.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/iomanager.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/iomanager.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/iomanager.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/iomanager.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/iomanager.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/iomanager.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/iomanager.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/iomanager.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/iomanager.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/iomanager.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/iomanager.cc.o
+.PHONY : alpha/iomanager.cc.o
 
-src/stream.i: src/stream.cc.i
+alpha/iomanager.i: alpha/iomanager.cc.i
 
-.PHONY : src/stream.i
+.PHONY : alpha/iomanager.i
 
 # target to preprocess a source file
-src/stream.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/stream.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/stream.cc.i
-.PHONY : src/stream.cc.i
+alpha/iomanager.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/iomanager.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/iomanager.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/iomanager.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/iomanager.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/iomanager.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/iomanager.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/iomanager.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/iomanager.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/iomanager.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/iomanager.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/iomanager.cc.i
+.PHONY : alpha/iomanager.cc.i
 
-src/stream.s: src/stream.cc.s
+alpha/iomanager.s: alpha/iomanager.cc.s
 
-.PHONY : src/stream.s
+.PHONY : alpha/iomanager.s
 
 # target to generate assembly for a file
-src/stream.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/stream.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/stream.cc.s
-.PHONY : src/stream.cc.s
+alpha/iomanager.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/iomanager.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/iomanager.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/iomanager.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/iomanager.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/iomanager.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/iomanager.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/iomanager.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/iomanager.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/iomanager.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/iomanager.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/iomanager.cc.s
+.PHONY : alpha/iomanager.cc.s
 
-src/tcp_server.o: src/tcp_server.cc.o
+alpha/log.o: alpha/log.cc.o
 
-.PHONY : src/tcp_server.o
+.PHONY : alpha/log.o
 
 # target to build an object file
-src/tcp_server.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/tcp_server.cc.o
-.PHONY : src/tcp_server.cc.o
+alpha/log.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/log.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/log.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/log.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/log.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/log.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/log.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/log.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/log.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/log.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/log.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/log.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/log.cc.o
+.PHONY : alpha/log.cc.o
 
-src/tcp_server.i: src/tcp_server.cc.i
+alpha/log.i: alpha/log.cc.i
 
-.PHONY : src/tcp_server.i
+.PHONY : alpha/log.i
 
 # target to preprocess a source file
-src/tcp_server.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/tcp_server.cc.i
-.PHONY : src/tcp_server.cc.i
+alpha/log.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/log.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/log.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/log.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/log.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/log.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/log.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/log.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/log.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/log.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/log.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/log.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/log.cc.i
+.PHONY : alpha/log.cc.i
 
-src/tcp_server.s: src/tcp_server.cc.s
+alpha/log.s: alpha/log.cc.s
 
-.PHONY : src/tcp_server.s
+.PHONY : alpha/log.s
 
 # target to generate assembly for a file
-src/tcp_server.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/tcp_server.cc.s
-.PHONY : src/tcp_server.cc.s
+alpha/log.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/log.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/log.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/log.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/log.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/log.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/log.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/log.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/log.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/log.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/log.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/log.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/log.cc.s
+.PHONY : alpha/log.cc.s
 
-src/thread.o: src/thread.cc.o
+alpha/mutex.o: alpha/mutex.cc.o
 
-.PHONY : src/thread.o
+.PHONY : alpha/mutex.o
 
 # target to build an object file
-src/thread.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/thread.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/thread.cc.o
-.PHONY : src/thread.cc.o
+alpha/mutex.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/mutex.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/mutex.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/mutex.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/mutex.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/mutex.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/mutex.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/mutex.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/mutex.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/mutex.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/mutex.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/mutex.cc.o
+.PHONY : alpha/mutex.cc.o
 
-src/thread.i: src/thread.cc.i
+alpha/mutex.i: alpha/mutex.cc.i
 
-.PHONY : src/thread.i
+.PHONY : alpha/mutex.i
 
 # target to preprocess a source file
-src/thread.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/thread.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/thread.cc.i
-.PHONY : src/thread.cc.i
+alpha/mutex.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/mutex.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/mutex.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/mutex.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/mutex.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/mutex.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/mutex.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/mutex.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/mutex.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/mutex.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/mutex.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/mutex.cc.i
+.PHONY : alpha/mutex.cc.i
 
-src/thread.s: src/thread.cc.s
+alpha/mutex.s: alpha/mutex.cc.s
 
-.PHONY : src/thread.s
+.PHONY : alpha/mutex.s
 
 # target to generate assembly for a file
-src/thread.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/thread.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/thread.cc.s
-.PHONY : src/thread.cc.s
+alpha/mutex.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/mutex.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/mutex.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/mutex.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/mutex.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/mutex.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/mutex.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/mutex.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/mutex.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/mutex.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/mutex.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/mutex.cc.s
+.PHONY : alpha/mutex.cc.s
 
-src/timer.o: src/timer.cc.o
+alpha/scheduler.o: alpha/scheduler.cc.o
 
-.PHONY : src/timer.o
+.PHONY : alpha/scheduler.o
 
 # target to build an object file
-src/timer.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/timer.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/timer.cc.o
-.PHONY : src/timer.cc.o
+alpha/scheduler.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/scheduler.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/scheduler.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/scheduler.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/scheduler.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/scheduler.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/scheduler.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/scheduler.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/scheduler.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/scheduler.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/scheduler.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/scheduler.cc.o
+.PHONY : alpha/scheduler.cc.o
 
-src/timer.i: src/timer.cc.i
+alpha/scheduler.i: alpha/scheduler.cc.i
 
-.PHONY : src/timer.i
+.PHONY : alpha/scheduler.i
 
 # target to preprocess a source file
-src/timer.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/timer.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/timer.cc.i
-.PHONY : src/timer.cc.i
+alpha/scheduler.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/scheduler.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/scheduler.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/scheduler.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/scheduler.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/scheduler.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/scheduler.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/scheduler.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/scheduler.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/scheduler.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/scheduler.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/scheduler.cc.i
+.PHONY : alpha/scheduler.cc.i
 
-src/timer.s: src/timer.cc.s
+alpha/scheduler.s: alpha/scheduler.cc.s
 
-.PHONY : src/timer.s
+.PHONY : alpha/scheduler.s
 
 # target to generate assembly for a file
-src/timer.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/timer.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/timer.cc.s
-.PHONY : src/timer.cc.s
+alpha/scheduler.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/scheduler.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/scheduler.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/scheduler.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/scheduler.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/scheduler.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/scheduler.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/scheduler.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/scheduler.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/scheduler.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/scheduler.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/scheduler.cc.s
+.PHONY : alpha/scheduler.cc.s
 
-src/util.o: src/util.cc.o
+alpha/socket.o: alpha/socket.cc.o
 
-.PHONY : src/util.o
+.PHONY : alpha/socket.o
 
 # target to build an object file
-src/util.cc.o:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/util.cc.o
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/util.cc.o
-.PHONY : src/util.cc.o
+alpha/socket.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/socket.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/socket.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/socket.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/socket.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/socket.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/socket.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/socket.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/socket.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/socket.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/socket.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/socket.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/socket.cc.o
+.PHONY : alpha/socket.cc.o
 
-src/util.i: src/util.cc.i
+alpha/socket.i: alpha/socket.cc.i
 
-.PHONY : src/util.i
+.PHONY : alpha/socket.i
 
 # target to preprocess a source file
-src/util.cc.i:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/util.cc.i
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/util.cc.i
-.PHONY : src/util.cc.i
+alpha/socket.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/socket.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/socket.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/socket.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/socket.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/socket.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/socket.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/socket.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/socket.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/socket.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/socket.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/socket.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/socket.cc.i
+.PHONY : alpha/socket.cc.i
 
-src/util.s: src/util.cc.s
+alpha/socket.s: alpha/socket.cc.s
 
-.PHONY : src/util.s
+.PHONY : alpha/socket.s
 
 # target to generate assembly for a file
-src/util.cc.s:
-	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/src/util.cc.s
-	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/src/util.cc.s
-.PHONY : src/util.cc.s
+alpha/socket.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/socket.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/socket.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/socket.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/socket.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/socket.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/socket.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/socket.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/socket.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/socket.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/socket.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/socket.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/socket.cc.s
+.PHONY : alpha/socket.cc.s
+
+alpha/stream.o: alpha/stream.cc.o
+
+.PHONY : alpha/stream.o
+
+# target to build an object file
+alpha/stream.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/stream.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/stream.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/stream.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/stream.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/stream.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/stream.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/stream.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/stream.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/stream.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/stream.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/stream.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/stream.cc.o
+.PHONY : alpha/stream.cc.o
+
+alpha/stream.i: alpha/stream.cc.i
+
+.PHONY : alpha/stream.i
+
+# target to preprocess a source file
+alpha/stream.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/stream.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/stream.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/stream.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/stream.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/stream.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/stream.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/stream.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/stream.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/stream.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/stream.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/stream.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/stream.cc.i
+.PHONY : alpha/stream.cc.i
+
+alpha/stream.s: alpha/stream.cc.s
+
+.PHONY : alpha/stream.s
+
+# target to generate assembly for a file
+alpha/stream.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/stream.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/stream.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/stream.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/stream.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/stream.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/stream.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/stream.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/stream.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/stream.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/stream.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/stream.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/stream.cc.s
+.PHONY : alpha/stream.cc.s
+
+alpha/tcp_server.o: alpha/tcp_server.cc.o
+
+.PHONY : alpha/tcp_server.o
+
+# target to build an object file
+alpha/tcp_server.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/tcp_server.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/tcp_server.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/tcp_server.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/tcp_server.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/tcp_server.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/tcp_server.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/tcp_server.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/tcp_server.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/tcp_server.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/tcp_server.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/tcp_server.cc.o
+.PHONY : alpha/tcp_server.cc.o
+
+alpha/tcp_server.i: alpha/tcp_server.cc.i
+
+.PHONY : alpha/tcp_server.i
+
+# target to preprocess a source file
+alpha/tcp_server.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/tcp_server.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/tcp_server.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/tcp_server.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/tcp_server.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/tcp_server.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/tcp_server.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/tcp_server.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/tcp_server.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/tcp_server.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/tcp_server.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/tcp_server.cc.i
+.PHONY : alpha/tcp_server.cc.i
+
+alpha/tcp_server.s: alpha/tcp_server.cc.s
+
+.PHONY : alpha/tcp_server.s
+
+# target to generate assembly for a file
+alpha/tcp_server.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/tcp_server.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/tcp_server.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/tcp_server.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/tcp_server.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/tcp_server.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/tcp_server.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/tcp_server.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/tcp_server.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/tcp_server.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/tcp_server.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/tcp_server.cc.s
+.PHONY : alpha/tcp_server.cc.s
+
+alpha/thread.o: alpha/thread.cc.o
+
+.PHONY : alpha/thread.o
+
+# target to build an object file
+alpha/thread.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/thread.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/thread.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/thread.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/thread.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/thread.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/thread.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/thread.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/thread.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/thread.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/thread.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/thread.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/thread.cc.o
+.PHONY : alpha/thread.cc.o
+
+alpha/thread.i: alpha/thread.cc.i
+
+.PHONY : alpha/thread.i
+
+# target to preprocess a source file
+alpha/thread.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/thread.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/thread.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/thread.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/thread.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/thread.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/thread.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/thread.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/thread.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/thread.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/thread.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/thread.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/thread.cc.i
+.PHONY : alpha/thread.cc.i
+
+alpha/thread.s: alpha/thread.cc.s
+
+.PHONY : alpha/thread.s
+
+# target to generate assembly for a file
+alpha/thread.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/thread.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/thread.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/thread.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/thread.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/thread.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/thread.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/thread.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/thread.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/thread.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/thread.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/thread.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/thread.cc.s
+.PHONY : alpha/thread.cc.s
+
+alpha/timer.o: alpha/timer.cc.o
+
+.PHONY : alpha/timer.o
+
+# target to build an object file
+alpha/timer.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/timer.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/timer.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/timer.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/timer.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/timer.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/timer.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/timer.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/timer.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/timer.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/timer.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/timer.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/timer.cc.o
+.PHONY : alpha/timer.cc.o
+
+alpha/timer.i: alpha/timer.cc.i
+
+.PHONY : alpha/timer.i
+
+# target to preprocess a source file
+alpha/timer.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/timer.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/timer.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/timer.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/timer.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/timer.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/timer.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/timer.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/timer.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/timer.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/timer.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/timer.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/timer.cc.i
+.PHONY : alpha/timer.cc.i
+
+alpha/timer.s: alpha/timer.cc.s
+
+.PHONY : alpha/timer.s
+
+# target to generate assembly for a file
+alpha/timer.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/timer.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/timer.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/timer.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/timer.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/timer.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/timer.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/timer.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/timer.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/timer.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/timer.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/timer.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/timer.cc.s
+.PHONY : alpha/timer.cc.s
+
+alpha/util.o: alpha/util.cc.o
+
+.PHONY : alpha/util.o
+
+# target to build an object file
+alpha/util.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/util.cc.o
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/util.cc.o
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/util.cc.o
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/util.cc.o
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/util.cc.o
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/util.cc.o
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/util.cc.o
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/util.cc.o
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/util.cc.o
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/util.cc.o
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/util.cc.o
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/util.cc.o
+.PHONY : alpha/util.cc.o
+
+alpha/util.i: alpha/util.cc.i
+
+.PHONY : alpha/util.i
+
+# target to preprocess a source file
+alpha/util.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/util.cc.i
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/util.cc.i
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/util.cc.i
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/util.cc.i
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/util.cc.i
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/util.cc.i
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/util.cc.i
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/util.cc.i
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/util.cc.i
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/util.cc.i
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/util.cc.i
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/util.cc.i
+.PHONY : alpha/util.cc.i
+
+alpha/util.s: alpha/util.cc.s
+
+.PHONY : alpha/util.s
+
+# target to generate assembly for a file
+alpha/util.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/alpha/util.cc.s
+	$(MAKE) -f CMakeFiles/alpha.dir/build.make CMakeFiles/alpha.dir/alpha/util.cc.s
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/alpha/util.cc.s
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/alpha/util.cc.s
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/alpha/util.cc.s
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/alpha/util.cc.s
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/alpha/util.cc.s
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/alpha/util.cc.s
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/alpha/util.cc.s
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/alpha/util.cc.s
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/alpha/util.cc.s
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/alpha/util.cc.s
+.PHONY : alpha/util.cc.s
+
+tests/test_address.o: tests/test_address.cc.o
+
+.PHONY : tests/test_address.o
+
+# target to build an object file
+tests/test_address.cc.o:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.o
+.PHONY : tests/test_address.cc.o
+
+tests/test_address.i: tests/test_address.cc.i
+
+.PHONY : tests/test_address.i
+
+# target to preprocess a source file
+tests/test_address.cc.i:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.i
+.PHONY : tests/test_address.cc.i
+
+tests/test_address.s: tests/test_address.cc.s
+
+.PHONY : tests/test_address.s
+
+# target to generate assembly for a file
+tests/test_address.cc.s:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.s
+.PHONY : tests/test_address.cc.s
+
+tests/test_boost.o: tests/test_boost.cc.o
+
+.PHONY : tests/test_boost.o
+
+# target to build an object file
+tests/test_boost.cc.o:
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/tests/test_boost.cc.o
+.PHONY : tests/test_boost.cc.o
+
+tests/test_boost.i: tests/test_boost.cc.i
+
+.PHONY : tests/test_boost.i
+
+# target to preprocess a source file
+tests/test_boost.cc.i:
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/tests/test_boost.cc.i
+.PHONY : tests/test_boost.cc.i
+
+tests/test_boost.s: tests/test_boost.cc.s
+
+.PHONY : tests/test_boost.s
+
+# target to generate assembly for a file
+tests/test_boost.cc.s:
+	$(MAKE) -f CMakeFiles/test_boost.dir/build.make CMakeFiles/test_boost.dir/tests/test_boost.cc.s
+.PHONY : tests/test_boost.cc.s
+
+tests/test_bytearray.o: tests/test_bytearray.cc.o
+
+.PHONY : tests/test_bytearray.o
+
+# target to build an object file
+tests/test_bytearray.cc.o:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o
+.PHONY : tests/test_bytearray.cc.o
+
+tests/test_bytearray.i: tests/test_bytearray.cc.i
+
+.PHONY : tests/test_bytearray.i
+
+# target to preprocess a source file
+tests/test_bytearray.cc.i:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.i
+.PHONY : tests/test_bytearray.cc.i
+
+tests/test_bytearray.s: tests/test_bytearray.cc.s
+
+.PHONY : tests/test_bytearray.s
+
+# target to generate assembly for a file
+tests/test_bytearray.cc.s:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.s
+.PHONY : tests/test_bytearray.cc.s
+
+tests/test_fiber.o: tests/test_fiber.cc.o
+
+.PHONY : tests/test_fiber.o
+
+# target to build an object file
+tests/test_fiber.cc.o:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o
+.PHONY : tests/test_fiber.cc.o
+
+tests/test_fiber.i: tests/test_fiber.cc.i
+
+.PHONY : tests/test_fiber.i
+
+# target to preprocess a source file
+tests/test_fiber.cc.i:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.i
+.PHONY : tests/test_fiber.cc.i
+
+tests/test_fiber.s: tests/test_fiber.cc.s
+
+.PHONY : tests/test_fiber.s
+
+# target to generate assembly for a file
+tests/test_fiber.cc.s:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
+.PHONY : tests/test_fiber.cc.s
+
+tests/test_hook.o: tests/test_hook.cc.o
+
+.PHONY : tests/test_hook.o
+
+# target to build an object file
+tests/test_hook.cc.o:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.o
+.PHONY : tests/test_hook.cc.o
+
+tests/test_hook.i: tests/test_hook.cc.i
+
+.PHONY : tests/test_hook.i
+
+# target to preprocess a source file
+tests/test_hook.cc.i:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.i
+.PHONY : tests/test_hook.cc.i
+
+tests/test_hook.s: tests/test_hook.cc.s
+
+.PHONY : tests/test_hook.s
+
+# target to generate assembly for a file
+tests/test_hook.cc.s:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.s
+.PHONY : tests/test_hook.cc.s
+
+tests/test_iomanager.o: tests/test_iomanager.cc.o
+
+.PHONY : tests/test_iomanager.o
+
+# target to build an object file
+tests/test_iomanager.cc.o:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
+.PHONY : tests/test_iomanager.cc.o
+
+tests/test_iomanager.i: tests/test_iomanager.cc.i
+
+.PHONY : tests/test_iomanager.i
+
+# target to preprocess a source file
+tests/test_iomanager.cc.i:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.i
+.PHONY : tests/test_iomanager.cc.i
+
+tests/test_iomanager.s: tests/test_iomanager.cc.s
+
+.PHONY : tests/test_iomanager.s
+
+# target to generate assembly for a file
+tests/test_iomanager.cc.s:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.s
+.PHONY : tests/test_iomanager.cc.s
+
+tests/test_log.o: tests/test_log.cc.o
+
+.PHONY : tests/test_log.o
+
+# target to build an object file
+tests/test_log.cc.o:
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/tests/test_log.cc.o
+.PHONY : tests/test_log.cc.o
+
+tests/test_log.i: tests/test_log.cc.i
+
+.PHONY : tests/test_log.i
+
+# target to preprocess a source file
+tests/test_log.cc.i:
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/tests/test_log.cc.i
+.PHONY : tests/test_log.cc.i
+
+tests/test_log.s: tests/test_log.cc.s
+
+.PHONY : tests/test_log.s
+
+# target to generate assembly for a file
+tests/test_log.cc.s:
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/tests/test_log.cc.s
+.PHONY : tests/test_log.cc.s
+
+tests/test_scheduler.o: tests/test_scheduler.cc.o
+
+.PHONY : tests/test_scheduler.o
+
+# target to build an object file
+tests/test_scheduler.cc.o:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o
+.PHONY : tests/test_scheduler.cc.o
+
+tests/test_scheduler.i: tests/test_scheduler.cc.i
+
+.PHONY : tests/test_scheduler.i
+
+# target to preprocess a source file
+tests/test_scheduler.cc.i:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.i
+.PHONY : tests/test_scheduler.cc.i
+
+tests/test_scheduler.s: tests/test_scheduler.cc.s
+
+.PHONY : tests/test_scheduler.s
+
+# target to generate assembly for a file
+tests/test_scheduler.cc.s:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.s
+.PHONY : tests/test_scheduler.cc.s
+
+tests/test_socket.o: tests/test_socket.cc.o
+
+.PHONY : tests/test_socket.o
+
+# target to build an object file
+tests/test_socket.cc.o:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.o
+.PHONY : tests/test_socket.cc.o
+
+tests/test_socket.i: tests/test_socket.cc.i
+
+.PHONY : tests/test_socket.i
+
+# target to preprocess a source file
+tests/test_socket.cc.i:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.i
+.PHONY : tests/test_socket.cc.i
+
+tests/test_socket.s: tests/test_socket.cc.s
+
+.PHONY : tests/test_socket.s
+
+# target to generate assembly for a file
+tests/test_socket.cc.s:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.s
+.PHONY : tests/test_socket.cc.s
 
 tests/test_tcp_server.o: tests/test_tcp_server.cc.o
 
@@ -690,6 +1573,33 @@ tests/test_tcp_server.cc.s:
 	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.s
 .PHONY : tests/test_tcp_server.cc.s
 
+tests/test_thread.o: tests/test_thread.cc.o
+
+.PHONY : tests/test_thread.o
+
+# target to build an object file
+tests/test_thread.cc.o:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.o
+.PHONY : tests/test_thread.cc.o
+
+tests/test_thread.i: tests/test_thread.cc.i
+
+.PHONY : tests/test_thread.i
+
+# target to preprocess a source file
+tests/test_thread.cc.i:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.i
+.PHONY : tests/test_thread.cc.i
+
+tests/test_thread.s: tests/test_thread.cc.s
+
+.PHONY : tests/test_thread.s
+
+# target to generate assembly for a file
+tests/test_thread.cc.s:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.s
+.PHONY : tests/test_thread.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -699,61 +1609,101 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... alpha"
+	@echo "... test_address"
+	@echo "... test_boost"
+	@echo "... test_bytearray"
+	@echo "... test_fiber"
+	@echo "... test_hook"
+	@echo "... test_iomanager"
+	@echo "... test_log"
+	@echo "... test_scheduler"
+	@echo "... test_socket"
 	@echo "... test_tcp_server"
-	@echo "... src/address.o"
-	@echo "... src/address.i"
-	@echo "... src/address.s"
-	@echo "... src/bytearray.o"
-	@echo "... src/bytearray.i"
-	@echo "... src/bytearray.s"
-	@echo "... src/config.o"
-	@echo "... src/config.i"
-	@echo "... src/config.s"
-	@echo "... src/env.o"
-	@echo "... src/env.i"
-	@echo "... src/env.s"
-	@echo "... src/fd_manager.o"
-	@echo "... src/fd_manager.i"
-	@echo "... src/fd_manager.s"
-	@echo "... src/fiber.o"
-	@echo "... src/fiber.i"
-	@echo "... src/fiber.s"
-	@echo "... src/hook.o"
-	@echo "... src/hook.i"
-	@echo "... src/hook.s"
-	@echo "... src/iomanager.o"
-	@echo "... src/iomanager.i"
-	@echo "... src/iomanager.s"
-	@echo "... src/log.o"
-	@echo "... src/log.i"
-	@echo "... src/log.s"
-	@echo "... src/mutex.o"
-	@echo "... src/mutex.i"
-	@echo "... src/mutex.s"
-	@echo "... src/scheduler.o"
-	@echo "... src/scheduler.i"
-	@echo "... src/scheduler.s"
-	@echo "... src/socket.o"
-	@echo "... src/socket.i"
-	@echo "... src/socket.s"
-	@echo "... src/stream.o"
-	@echo "... src/stream.i"
-	@echo "... src/stream.s"
-	@echo "... src/tcp_server.o"
-	@echo "... src/tcp_server.i"
-	@echo "... src/tcp_server.s"
-	@echo "... src/thread.o"
-	@echo "... src/thread.i"
-	@echo "... src/thread.s"
-	@echo "... src/timer.o"
-	@echo "... src/timer.i"
-	@echo "... src/timer.s"
-	@echo "... src/util.o"
-	@echo "... src/util.i"
-	@echo "... src/util.s"
+	@echo "... test_thread"
+	@echo "... alpha/address.o"
+	@echo "... alpha/address.i"
+	@echo "... alpha/address.s"
+	@echo "... alpha/bytearray.o"
+	@echo "... alpha/bytearray.i"
+	@echo "... alpha/bytearray.s"
+	@echo "... alpha/config.o"
+	@echo "... alpha/config.i"
+	@echo "... alpha/config.s"
+	@echo "... alpha/env.o"
+	@echo "... alpha/env.i"
+	@echo "... alpha/env.s"
+	@echo "... alpha/fd_manager.o"
+	@echo "... alpha/fd_manager.i"
+	@echo "... alpha/fd_manager.s"
+	@echo "... alpha/fiber.o"
+	@echo "... alpha/fiber.i"
+	@echo "... alpha/fiber.s"
+	@echo "... alpha/hook.o"
+	@echo "... alpha/hook.i"
+	@echo "... alpha/hook.s"
+	@echo "... alpha/iomanager.o"
+	@echo "... alpha/iomanager.i"
+	@echo "... alpha/iomanager.s"
+	@echo "... alpha/log.o"
+	@echo "... alpha/log.i"
+	@echo "... alpha/log.s"
+	@echo "... alpha/mutex.o"
+	@echo "... alpha/mutex.i"
+	@echo "... alpha/mutex.s"
+	@echo "... alpha/scheduler.o"
+	@echo "... alpha/scheduler.i"
+	@echo "... alpha/scheduler.s"
+	@echo "... alpha/socket.o"
+	@echo "... alpha/socket.i"
+	@echo "... alpha/socket.s"
+	@echo "... alpha/stream.o"
+	@echo "... alpha/stream.i"
+	@echo "... alpha/stream.s"
+	@echo "... alpha/tcp_server.o"
+	@echo "... alpha/tcp_server.i"
+	@echo "... alpha/tcp_server.s"
+	@echo "... alpha/thread.o"
+	@echo "... alpha/thread.i"
+	@echo "... alpha/thread.s"
+	@echo "... alpha/timer.o"
+	@echo "... alpha/timer.i"
+	@echo "... alpha/timer.s"
+	@echo "... alpha/util.o"
+	@echo "... alpha/util.i"
+	@echo "... alpha/util.s"
+	@echo "... tests/test_address.o"
+	@echo "... tests/test_address.i"
+	@echo "... tests/test_address.s"
+	@echo "... tests/test_boost.o"
+	@echo "... tests/test_boost.i"
+	@echo "... tests/test_boost.s"
+	@echo "... tests/test_bytearray.o"
+	@echo "... tests/test_bytearray.i"
+	@echo "... tests/test_bytearray.s"
+	@echo "... tests/test_fiber.o"
+	@echo "... tests/test_fiber.i"
+	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_hook.o"
+	@echo "... tests/test_hook.i"
+	@echo "... tests/test_hook.s"
+	@echo "... tests/test_iomanager.o"
+	@echo "... tests/test_iomanager.i"
+	@echo "... tests/test_iomanager.s"
+	@echo "... tests/test_log.o"
+	@echo "... tests/test_log.i"
+	@echo "... tests/test_log.s"
+	@echo "... tests/test_scheduler.o"
+	@echo "... tests/test_scheduler.i"
+	@echo "... tests/test_scheduler.s"
+	@echo "... tests/test_socket.o"
+	@echo "... tests/test_socket.i"
+	@echo "... tests/test_socket.s"
 	@echo "... tests/test_tcp_server.o"
 	@echo "... tests/test_tcp_server.i"
 	@echo "... tests/test_tcp_server.s"
+	@echo "... tests/test_thread.o"
+	@echo "... tests/test_thread.i"
+	@echo "... tests/test_thread.s"
 .PHONY : help
 
 

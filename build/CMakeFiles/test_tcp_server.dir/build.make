@@ -87,269 +87,269 @@ CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/tests/test_tcp_server.cc -o CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/address.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/address.cc.o: ../src/address.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_tcp_server.dir/src/address.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/address.cc.o -c /home/mz/workspace/AlphaMin/src/address.cc
+CMakeFiles/test_tcp_server.dir/alpha/address.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/address.cc.o: ../alpha/address.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/address.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/address.cc.o -c /home/mz/workspace/AlphaMin/alpha/address.cc
 
-CMakeFiles/test_tcp_server.dir/src/address.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/address.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/address.cc > CMakeFiles/test_tcp_server.dir/src/address.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/address.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/address.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/address.cc > CMakeFiles/test_tcp_server.dir/alpha/address.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/address.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/address.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/address.cc -o CMakeFiles/test_tcp_server.dir/src/address.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/address.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/address.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/address.cc -o CMakeFiles/test_tcp_server.dir/alpha/address.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/bytearray.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/bytearray.cc.o: ../src/bytearray.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test_tcp_server.dir/src/bytearray.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/bytearray.cc.o -c /home/mz/workspace/AlphaMin/src/bytearray.cc
+CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.o: ../alpha/bytearray.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.o -c /home/mz/workspace/AlphaMin/alpha/bytearray.cc
 
-CMakeFiles/test_tcp_server.dir/src/bytearray.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/bytearray.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/bytearray.cc > CMakeFiles/test_tcp_server.dir/src/bytearray.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/bytearray.cc > CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/bytearray.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/bytearray.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/bytearray.cc -o CMakeFiles/test_tcp_server.dir/src/bytearray.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/bytearray.cc -o CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/config.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/config.cc.o: ../src/config.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test_tcp_server.dir/src/config.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/config.cc.o -c /home/mz/workspace/AlphaMin/src/config.cc
+CMakeFiles/test_tcp_server.dir/alpha/config.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/config.cc.o: ../alpha/config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/config.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/config.cc.o -c /home/mz/workspace/AlphaMin/alpha/config.cc
 
-CMakeFiles/test_tcp_server.dir/src/config.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/config.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/config.cc > CMakeFiles/test_tcp_server.dir/src/config.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/config.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/config.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/config.cc > CMakeFiles/test_tcp_server.dir/alpha/config.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/config.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/config.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/config.cc -o CMakeFiles/test_tcp_server.dir/src/config.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/config.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/config.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/config.cc -o CMakeFiles/test_tcp_server.dir/alpha/config.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/env.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/env.cc.o: ../src/env.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test_tcp_server.dir/src/env.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/env.cc.o -c /home/mz/workspace/AlphaMin/src/env.cc
+CMakeFiles/test_tcp_server.dir/alpha/env.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/env.cc.o: ../alpha/env.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/env.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/env.cc.o -c /home/mz/workspace/AlphaMin/alpha/env.cc
 
-CMakeFiles/test_tcp_server.dir/src/env.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/env.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/env.cc > CMakeFiles/test_tcp_server.dir/src/env.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/env.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/env.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/env.cc > CMakeFiles/test_tcp_server.dir/alpha/env.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/env.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/env.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/env.cc -o CMakeFiles/test_tcp_server.dir/src/env.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/env.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/env.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/env.cc -o CMakeFiles/test_tcp_server.dir/alpha/env.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.o: ../src/fd_manager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.o -c /home/mz/workspace/AlphaMin/src/fd_manager.cc
+CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.o: ../alpha/fd_manager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.o -c /home/mz/workspace/AlphaMin/alpha/fd_manager.cc
 
-CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/fd_manager.cc > CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/fd_manager.cc > CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/fd_manager.cc -o CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/fd_manager.cc -o CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/fiber.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/fiber.cc.o: ../src/fiber.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test_tcp_server.dir/src/fiber.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/fiber.cc.o -c /home/mz/workspace/AlphaMin/src/fiber.cc
+CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.o: ../alpha/fiber.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.o -c /home/mz/workspace/AlphaMin/alpha/fiber.cc
 
-CMakeFiles/test_tcp_server.dir/src/fiber.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/fiber.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/fiber.cc > CMakeFiles/test_tcp_server.dir/src/fiber.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/fiber.cc > CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/fiber.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/fiber.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/fiber.cc -o CMakeFiles/test_tcp_server.dir/src/fiber.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/fiber.cc -o CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/hook.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/hook.cc.o: ../src/hook.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test_tcp_server.dir/src/hook.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/hook.cc.o -c /home/mz/workspace/AlphaMin/src/hook.cc
+CMakeFiles/test_tcp_server.dir/alpha/hook.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/hook.cc.o: ../alpha/hook.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/hook.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/hook.cc.o -c /home/mz/workspace/AlphaMin/alpha/hook.cc
 
-CMakeFiles/test_tcp_server.dir/src/hook.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/hook.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/hook.cc > CMakeFiles/test_tcp_server.dir/src/hook.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/hook.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/hook.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/hook.cc > CMakeFiles/test_tcp_server.dir/alpha/hook.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/hook.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/hook.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/hook.cc -o CMakeFiles/test_tcp_server.dir/src/hook.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/hook.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/hook.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/hook.cc -o CMakeFiles/test_tcp_server.dir/alpha/hook.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/iomanager.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/iomanager.cc.o: ../src/iomanager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test_tcp_server.dir/src/iomanager.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/iomanager.cc.o -c /home/mz/workspace/AlphaMin/src/iomanager.cc
+CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.o: ../alpha/iomanager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.o -c /home/mz/workspace/AlphaMin/alpha/iomanager.cc
 
-CMakeFiles/test_tcp_server.dir/src/iomanager.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/iomanager.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/iomanager.cc > CMakeFiles/test_tcp_server.dir/src/iomanager.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/iomanager.cc > CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/iomanager.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/iomanager.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/iomanager.cc -o CMakeFiles/test_tcp_server.dir/src/iomanager.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/iomanager.cc -o CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/log.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/log.cc.o: ../src/log.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test_tcp_server.dir/src/log.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/log.cc.o -c /home/mz/workspace/AlphaMin/src/log.cc
+CMakeFiles/test_tcp_server.dir/alpha/log.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/log.cc.o: ../alpha/log.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/log.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/log.cc.o -c /home/mz/workspace/AlphaMin/alpha/log.cc
 
-CMakeFiles/test_tcp_server.dir/src/log.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/log.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/log.cc > CMakeFiles/test_tcp_server.dir/src/log.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/log.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/log.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/log.cc > CMakeFiles/test_tcp_server.dir/alpha/log.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/log.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/log.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/log.cc -o CMakeFiles/test_tcp_server.dir/src/log.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/log.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/log.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/log.cc -o CMakeFiles/test_tcp_server.dir/alpha/log.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/mutex.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/mutex.cc.o: ../src/mutex.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test_tcp_server.dir/src/mutex.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/mutex.cc.o -c /home/mz/workspace/AlphaMin/src/mutex.cc
+CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.o: ../alpha/mutex.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.o -c /home/mz/workspace/AlphaMin/alpha/mutex.cc
 
-CMakeFiles/test_tcp_server.dir/src/mutex.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/mutex.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/mutex.cc > CMakeFiles/test_tcp_server.dir/src/mutex.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/mutex.cc > CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/mutex.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/mutex.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/mutex.cc -o CMakeFiles/test_tcp_server.dir/src/mutex.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/mutex.cc -o CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/scheduler.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/scheduler.cc.o: ../src/scheduler.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/test_tcp_server.dir/src/scheduler.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/scheduler.cc.o -c /home/mz/workspace/AlphaMin/src/scheduler.cc
+CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.o: ../alpha/scheduler.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.o -c /home/mz/workspace/AlphaMin/alpha/scheduler.cc
 
-CMakeFiles/test_tcp_server.dir/src/scheduler.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/scheduler.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/scheduler.cc > CMakeFiles/test_tcp_server.dir/src/scheduler.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/scheduler.cc > CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/scheduler.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/scheduler.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/scheduler.cc -o CMakeFiles/test_tcp_server.dir/src/scheduler.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/scheduler.cc -o CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/socket.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/socket.cc.o: ../src/socket.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/test_tcp_server.dir/src/socket.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/socket.cc.o -c /home/mz/workspace/AlphaMin/src/socket.cc
+CMakeFiles/test_tcp_server.dir/alpha/socket.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/socket.cc.o: ../alpha/socket.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/socket.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/socket.cc.o -c /home/mz/workspace/AlphaMin/alpha/socket.cc
 
-CMakeFiles/test_tcp_server.dir/src/socket.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/socket.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/socket.cc > CMakeFiles/test_tcp_server.dir/src/socket.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/socket.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/socket.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/socket.cc > CMakeFiles/test_tcp_server.dir/alpha/socket.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/socket.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/socket.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/socket.cc -o CMakeFiles/test_tcp_server.dir/src/socket.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/socket.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/socket.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/socket.cc -o CMakeFiles/test_tcp_server.dir/alpha/socket.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/stream.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/stream.cc.o: ../src/stream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/test_tcp_server.dir/src/stream.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/stream.cc.o -c /home/mz/workspace/AlphaMin/src/stream.cc
+CMakeFiles/test_tcp_server.dir/alpha/stream.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/stream.cc.o: ../alpha/stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/stream.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/stream.cc.o -c /home/mz/workspace/AlphaMin/alpha/stream.cc
 
-CMakeFiles/test_tcp_server.dir/src/stream.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/stream.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/stream.cc > CMakeFiles/test_tcp_server.dir/src/stream.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/stream.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/stream.cc > CMakeFiles/test_tcp_server.dir/alpha/stream.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/stream.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/stream.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/stream.cc -o CMakeFiles/test_tcp_server.dir/src/stream.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/stream.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/stream.cc -o CMakeFiles/test_tcp_server.dir/alpha/stream.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.o: ../src/tcp_server.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.o -c /home/mz/workspace/AlphaMin/src/tcp_server.cc
+CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.o: ../alpha/tcp_server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.o -c /home/mz/workspace/AlphaMin/alpha/tcp_server.cc
 
-CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/tcp_server.cc > CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/tcp_server.cc > CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/tcp_server.cc -o CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/tcp_server.cc -o CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/thread.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/thread.cc.o: ../src/thread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/test_tcp_server.dir/src/thread.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/thread.cc.o -c /home/mz/workspace/AlphaMin/src/thread.cc
+CMakeFiles/test_tcp_server.dir/alpha/thread.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/thread.cc.o: ../alpha/thread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/thread.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/thread.cc.o -c /home/mz/workspace/AlphaMin/alpha/thread.cc
 
-CMakeFiles/test_tcp_server.dir/src/thread.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/thread.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/thread.cc > CMakeFiles/test_tcp_server.dir/src/thread.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/thread.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/thread.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/thread.cc > CMakeFiles/test_tcp_server.dir/alpha/thread.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/thread.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/thread.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/thread.cc -o CMakeFiles/test_tcp_server.dir/src/thread.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/thread.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/thread.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/thread.cc -o CMakeFiles/test_tcp_server.dir/alpha/thread.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/timer.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/timer.cc.o: ../src/timer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/test_tcp_server.dir/src/timer.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/timer.cc.o -c /home/mz/workspace/AlphaMin/src/timer.cc
+CMakeFiles/test_tcp_server.dir/alpha/timer.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/timer.cc.o: ../alpha/timer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/timer.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/timer.cc.o -c /home/mz/workspace/AlphaMin/alpha/timer.cc
 
-CMakeFiles/test_tcp_server.dir/src/timer.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/timer.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/timer.cc > CMakeFiles/test_tcp_server.dir/src/timer.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/timer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/timer.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/timer.cc > CMakeFiles/test_tcp_server.dir/alpha/timer.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/timer.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/timer.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/timer.cc -o CMakeFiles/test_tcp_server.dir/src/timer.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/timer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/timer.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/timer.cc -o CMakeFiles/test_tcp_server.dir/alpha/timer.cc.s
 
-CMakeFiles/test_tcp_server.dir/src/util.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
-CMakeFiles/test_tcp_server.dir/src/util.cc.o: ../src/util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/test_tcp_server.dir/src/util.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/src/util.cc.o -c /home/mz/workspace/AlphaMin/src/util.cc
+CMakeFiles/test_tcp_server.dir/alpha/util.cc.o: CMakeFiles/test_tcp_server.dir/flags.make
+CMakeFiles/test_tcp_server.dir/alpha/util.cc.o: ../alpha/util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/test_tcp_server.dir/alpha/util.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_tcp_server.dir/alpha/util.cc.o -c /home/mz/workspace/AlphaMin/alpha/util.cc
 
-CMakeFiles/test_tcp_server.dir/src/util.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/src/util.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/util.cc > CMakeFiles/test_tcp_server.dir/src/util.cc.i
+CMakeFiles/test_tcp_server.dir/alpha/util.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_tcp_server.dir/alpha/util.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/util.cc > CMakeFiles/test_tcp_server.dir/alpha/util.cc.i
 
-CMakeFiles/test_tcp_server.dir/src/util.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/src/util.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/util.cc -o CMakeFiles/test_tcp_server.dir/src/util.cc.s
+CMakeFiles/test_tcp_server.dir/alpha/util.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_tcp_server.dir/alpha/util.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/util.cc -o CMakeFiles/test_tcp_server.dir/alpha/util.cc.s
 
 # Object files for target test_tcp_server
 test_tcp_server_OBJECTS = \
 "CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/address.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/bytearray.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/config.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/env.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/fiber.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/hook.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/iomanager.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/log.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/mutex.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/scheduler.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/socket.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/stream.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/thread.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/timer.cc.o" \
-"CMakeFiles/test_tcp_server.dir/src/util.cc.o"
+"CMakeFiles/test_tcp_server.dir/alpha/address.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/config.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/env.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/hook.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/log.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/socket.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/stream.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/thread.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/timer.cc.o" \
+"CMakeFiles/test_tcp_server.dir/alpha/util.cc.o"
 
 # External object files for target test_tcp_server
 test_tcp_server_EXTERNAL_OBJECTS =
 
 ../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/address.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/bytearray.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/config.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/env.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/fd_manager.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/fiber.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/hook.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/iomanager.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/log.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/mutex.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/scheduler.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/socket.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/stream.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/tcp_server.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/thread.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/timer.cc.o
-../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/src/util.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/address.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/bytearray.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/config.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/env.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/fd_manager.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/fiber.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/hook.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/iomanager.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/log.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/mutex.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/scheduler.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/socket.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/stream.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/tcp_server.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/thread.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/timer.cc.o
+../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/alpha/util.cc.o
 ../bin/test_tcp_server: CMakeFiles/test_tcp_server.dir/build.make
 ../bin/test_tcp_server: /usr/lib64/libssl.so
 ../bin/test_tcp_server: /usr/lib64/libcrypto.so

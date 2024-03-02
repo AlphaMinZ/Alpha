@@ -6,5 +6,5 @@ CXX_FLAGS =  -O0 -g2 -ggdb -fPIC   -std=gnu++11
 
 CXX_DEFINES = -Dalpha_EXPORTS
 
-CXX_INCLUDES = -I/home/mz/workspace/AlphaMin/./inc -I/home/mz/workspace/AlphaMin/inc/http -I/home/mz/workspace/AlphaMin/inc/streams -I/home/mz/workspace/AlphaMin 
+CXX_INCLUDES = -I/home/mz/workspace/AlphaMin/./alpha -I/home/mz/workspace/AlphaMin 
 

@@ -74,267 +74,267 @@ include CMakeFiles/alpha.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/alpha.dir/flags.make
 
-CMakeFiles/alpha.dir/src/address.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/address.cc.o: ../src/address.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/alpha.dir/src/address.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/address.cc.o -c /home/mz/workspace/AlphaMin/src/address.cc
+CMakeFiles/alpha.dir/alpha/address.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/address.cc.o: ../alpha/address.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/alpha.dir/alpha/address.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/address.cc.o -c /home/mz/workspace/AlphaMin/alpha/address.cc
 
-CMakeFiles/alpha.dir/src/address.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/address.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/address.cc > CMakeFiles/alpha.dir/src/address.cc.i
+CMakeFiles/alpha.dir/alpha/address.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/address.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/address.cc > CMakeFiles/alpha.dir/alpha/address.cc.i
 
-CMakeFiles/alpha.dir/src/address.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/address.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/address.cc -o CMakeFiles/alpha.dir/src/address.cc.s
+CMakeFiles/alpha.dir/alpha/address.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/address.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/address.cc -o CMakeFiles/alpha.dir/alpha/address.cc.s
 
-CMakeFiles/alpha.dir/src/bytearray.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/bytearray.cc.o: ../src/bytearray.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/alpha.dir/src/bytearray.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/bytearray.cc.o -c /home/mz/workspace/AlphaMin/src/bytearray.cc
+CMakeFiles/alpha.dir/alpha/bytearray.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/bytearray.cc.o: ../alpha/bytearray.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/alpha.dir/alpha/bytearray.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/bytearray.cc.o -c /home/mz/workspace/AlphaMin/alpha/bytearray.cc
 
-CMakeFiles/alpha.dir/src/bytearray.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/bytearray.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/bytearray.cc > CMakeFiles/alpha.dir/src/bytearray.cc.i
+CMakeFiles/alpha.dir/alpha/bytearray.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/bytearray.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/bytearray.cc > CMakeFiles/alpha.dir/alpha/bytearray.cc.i
 
-CMakeFiles/alpha.dir/src/bytearray.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/bytearray.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/bytearray.cc -o CMakeFiles/alpha.dir/src/bytearray.cc.s
+CMakeFiles/alpha.dir/alpha/bytearray.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/bytearray.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/bytearray.cc -o CMakeFiles/alpha.dir/alpha/bytearray.cc.s
 
-CMakeFiles/alpha.dir/src/config.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/config.cc.o: ../src/config.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/alpha.dir/src/config.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/config.cc.o -c /home/mz/workspace/AlphaMin/src/config.cc
+CMakeFiles/alpha.dir/alpha/config.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/config.cc.o: ../alpha/config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/alpha.dir/alpha/config.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/config.cc.o -c /home/mz/workspace/AlphaMin/alpha/config.cc
 
-CMakeFiles/alpha.dir/src/config.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/config.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/config.cc > CMakeFiles/alpha.dir/src/config.cc.i
+CMakeFiles/alpha.dir/alpha/config.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/config.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/config.cc > CMakeFiles/alpha.dir/alpha/config.cc.i
 
-CMakeFiles/alpha.dir/src/config.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/config.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/config.cc -o CMakeFiles/alpha.dir/src/config.cc.s
+CMakeFiles/alpha.dir/alpha/config.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/config.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/config.cc -o CMakeFiles/alpha.dir/alpha/config.cc.s
 
-CMakeFiles/alpha.dir/src/env.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/env.cc.o: ../src/env.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/alpha.dir/src/env.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/env.cc.o -c /home/mz/workspace/AlphaMin/src/env.cc
+CMakeFiles/alpha.dir/alpha/env.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/env.cc.o: ../alpha/env.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/alpha.dir/alpha/env.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/env.cc.o -c /home/mz/workspace/AlphaMin/alpha/env.cc
 
-CMakeFiles/alpha.dir/src/env.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/env.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/env.cc > CMakeFiles/alpha.dir/src/env.cc.i
+CMakeFiles/alpha.dir/alpha/env.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/env.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/env.cc > CMakeFiles/alpha.dir/alpha/env.cc.i
 
-CMakeFiles/alpha.dir/src/env.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/env.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/env.cc -o CMakeFiles/alpha.dir/src/env.cc.s
+CMakeFiles/alpha.dir/alpha/env.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/env.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/env.cc -o CMakeFiles/alpha.dir/alpha/env.cc.s
 
-CMakeFiles/alpha.dir/src/fd_manager.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/fd_manager.cc.o: ../src/fd_manager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/alpha.dir/src/fd_manager.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/fd_manager.cc.o -c /home/mz/workspace/AlphaMin/src/fd_manager.cc
+CMakeFiles/alpha.dir/alpha/fd_manager.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/fd_manager.cc.o: ../alpha/fd_manager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/alpha.dir/alpha/fd_manager.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/fd_manager.cc.o -c /home/mz/workspace/AlphaMin/alpha/fd_manager.cc
 
-CMakeFiles/alpha.dir/src/fd_manager.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/fd_manager.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/fd_manager.cc > CMakeFiles/alpha.dir/src/fd_manager.cc.i
+CMakeFiles/alpha.dir/alpha/fd_manager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/fd_manager.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/fd_manager.cc > CMakeFiles/alpha.dir/alpha/fd_manager.cc.i
 
-CMakeFiles/alpha.dir/src/fd_manager.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/fd_manager.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/fd_manager.cc -o CMakeFiles/alpha.dir/src/fd_manager.cc.s
+CMakeFiles/alpha.dir/alpha/fd_manager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/fd_manager.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/fd_manager.cc -o CMakeFiles/alpha.dir/alpha/fd_manager.cc.s
 
-CMakeFiles/alpha.dir/src/fiber.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/fiber.cc.o: ../src/fiber.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/alpha.dir/src/fiber.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/fiber.cc.o -c /home/mz/workspace/AlphaMin/src/fiber.cc
+CMakeFiles/alpha.dir/alpha/fiber.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/fiber.cc.o: ../alpha/fiber.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/alpha.dir/alpha/fiber.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/fiber.cc.o -c /home/mz/workspace/AlphaMin/alpha/fiber.cc
 
-CMakeFiles/alpha.dir/src/fiber.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/fiber.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/fiber.cc > CMakeFiles/alpha.dir/src/fiber.cc.i
+CMakeFiles/alpha.dir/alpha/fiber.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/fiber.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/fiber.cc > CMakeFiles/alpha.dir/alpha/fiber.cc.i
 
-CMakeFiles/alpha.dir/src/fiber.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/fiber.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/fiber.cc -o CMakeFiles/alpha.dir/src/fiber.cc.s
+CMakeFiles/alpha.dir/alpha/fiber.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/fiber.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/fiber.cc -o CMakeFiles/alpha.dir/alpha/fiber.cc.s
 
-CMakeFiles/alpha.dir/src/hook.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/hook.cc.o: ../src/hook.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/alpha.dir/src/hook.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/hook.cc.o -c /home/mz/workspace/AlphaMin/src/hook.cc
+CMakeFiles/alpha.dir/alpha/hook.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/hook.cc.o: ../alpha/hook.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/alpha.dir/alpha/hook.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/hook.cc.o -c /home/mz/workspace/AlphaMin/alpha/hook.cc
 
-CMakeFiles/alpha.dir/src/hook.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/hook.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/hook.cc > CMakeFiles/alpha.dir/src/hook.cc.i
+CMakeFiles/alpha.dir/alpha/hook.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/hook.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/hook.cc > CMakeFiles/alpha.dir/alpha/hook.cc.i
 
-CMakeFiles/alpha.dir/src/hook.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/hook.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/hook.cc -o CMakeFiles/alpha.dir/src/hook.cc.s
+CMakeFiles/alpha.dir/alpha/hook.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/hook.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/hook.cc -o CMakeFiles/alpha.dir/alpha/hook.cc.s
 
-CMakeFiles/alpha.dir/src/iomanager.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/iomanager.cc.o: ../src/iomanager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/alpha.dir/src/iomanager.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/iomanager.cc.o -c /home/mz/workspace/AlphaMin/src/iomanager.cc
+CMakeFiles/alpha.dir/alpha/iomanager.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/iomanager.cc.o: ../alpha/iomanager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/alpha.dir/alpha/iomanager.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/iomanager.cc.o -c /home/mz/workspace/AlphaMin/alpha/iomanager.cc
 
-CMakeFiles/alpha.dir/src/iomanager.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/iomanager.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/iomanager.cc > CMakeFiles/alpha.dir/src/iomanager.cc.i
+CMakeFiles/alpha.dir/alpha/iomanager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/iomanager.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/iomanager.cc > CMakeFiles/alpha.dir/alpha/iomanager.cc.i
 
-CMakeFiles/alpha.dir/src/iomanager.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/iomanager.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/iomanager.cc -o CMakeFiles/alpha.dir/src/iomanager.cc.s
+CMakeFiles/alpha.dir/alpha/iomanager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/iomanager.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/iomanager.cc -o CMakeFiles/alpha.dir/alpha/iomanager.cc.s
 
-CMakeFiles/alpha.dir/src/log.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/log.cc.o: ../src/log.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/alpha.dir/src/log.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/log.cc.o -c /home/mz/workspace/AlphaMin/src/log.cc
+CMakeFiles/alpha.dir/alpha/log.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/log.cc.o: ../alpha/log.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/alpha.dir/alpha/log.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/log.cc.o -c /home/mz/workspace/AlphaMin/alpha/log.cc
 
-CMakeFiles/alpha.dir/src/log.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/log.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/log.cc > CMakeFiles/alpha.dir/src/log.cc.i
+CMakeFiles/alpha.dir/alpha/log.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/log.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/log.cc > CMakeFiles/alpha.dir/alpha/log.cc.i
 
-CMakeFiles/alpha.dir/src/log.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/log.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/log.cc -o CMakeFiles/alpha.dir/src/log.cc.s
+CMakeFiles/alpha.dir/alpha/log.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/log.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/log.cc -o CMakeFiles/alpha.dir/alpha/log.cc.s
 
-CMakeFiles/alpha.dir/src/mutex.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/mutex.cc.o: ../src/mutex.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/alpha.dir/src/mutex.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/mutex.cc.o -c /home/mz/workspace/AlphaMin/src/mutex.cc
+CMakeFiles/alpha.dir/alpha/mutex.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/mutex.cc.o: ../alpha/mutex.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/alpha.dir/alpha/mutex.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/mutex.cc.o -c /home/mz/workspace/AlphaMin/alpha/mutex.cc
 
-CMakeFiles/alpha.dir/src/mutex.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/mutex.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/mutex.cc > CMakeFiles/alpha.dir/src/mutex.cc.i
+CMakeFiles/alpha.dir/alpha/mutex.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/mutex.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/mutex.cc > CMakeFiles/alpha.dir/alpha/mutex.cc.i
 
-CMakeFiles/alpha.dir/src/mutex.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/mutex.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/mutex.cc -o CMakeFiles/alpha.dir/src/mutex.cc.s
+CMakeFiles/alpha.dir/alpha/mutex.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/mutex.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/mutex.cc -o CMakeFiles/alpha.dir/alpha/mutex.cc.s
 
-CMakeFiles/alpha.dir/src/scheduler.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/scheduler.cc.o: ../src/scheduler.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/alpha.dir/src/scheduler.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/scheduler.cc.o -c /home/mz/workspace/AlphaMin/src/scheduler.cc
+CMakeFiles/alpha.dir/alpha/scheduler.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/scheduler.cc.o: ../alpha/scheduler.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/alpha.dir/alpha/scheduler.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/scheduler.cc.o -c /home/mz/workspace/AlphaMin/alpha/scheduler.cc
 
-CMakeFiles/alpha.dir/src/scheduler.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/scheduler.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/scheduler.cc > CMakeFiles/alpha.dir/src/scheduler.cc.i
+CMakeFiles/alpha.dir/alpha/scheduler.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/scheduler.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/scheduler.cc > CMakeFiles/alpha.dir/alpha/scheduler.cc.i
 
-CMakeFiles/alpha.dir/src/scheduler.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/scheduler.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/scheduler.cc -o CMakeFiles/alpha.dir/src/scheduler.cc.s
+CMakeFiles/alpha.dir/alpha/scheduler.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/scheduler.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/scheduler.cc -o CMakeFiles/alpha.dir/alpha/scheduler.cc.s
 
-CMakeFiles/alpha.dir/src/socket.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/socket.cc.o: ../src/socket.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/alpha.dir/src/socket.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/socket.cc.o -c /home/mz/workspace/AlphaMin/src/socket.cc
+CMakeFiles/alpha.dir/alpha/socket.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/socket.cc.o: ../alpha/socket.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/alpha.dir/alpha/socket.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/socket.cc.o -c /home/mz/workspace/AlphaMin/alpha/socket.cc
 
-CMakeFiles/alpha.dir/src/socket.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/socket.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/socket.cc > CMakeFiles/alpha.dir/src/socket.cc.i
+CMakeFiles/alpha.dir/alpha/socket.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/socket.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/socket.cc > CMakeFiles/alpha.dir/alpha/socket.cc.i
 
-CMakeFiles/alpha.dir/src/socket.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/socket.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/socket.cc -o CMakeFiles/alpha.dir/src/socket.cc.s
+CMakeFiles/alpha.dir/alpha/socket.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/socket.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/socket.cc -o CMakeFiles/alpha.dir/alpha/socket.cc.s
 
-CMakeFiles/alpha.dir/src/stream.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/stream.cc.o: ../src/stream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/alpha.dir/src/stream.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/stream.cc.o -c /home/mz/workspace/AlphaMin/src/stream.cc
+CMakeFiles/alpha.dir/alpha/stream.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/stream.cc.o: ../alpha/stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/alpha.dir/alpha/stream.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/stream.cc.o -c /home/mz/workspace/AlphaMin/alpha/stream.cc
 
-CMakeFiles/alpha.dir/src/stream.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/stream.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/stream.cc > CMakeFiles/alpha.dir/src/stream.cc.i
+CMakeFiles/alpha.dir/alpha/stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/stream.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/stream.cc > CMakeFiles/alpha.dir/alpha/stream.cc.i
 
-CMakeFiles/alpha.dir/src/stream.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/stream.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/stream.cc -o CMakeFiles/alpha.dir/src/stream.cc.s
+CMakeFiles/alpha.dir/alpha/stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/stream.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/stream.cc -o CMakeFiles/alpha.dir/alpha/stream.cc.s
 
-CMakeFiles/alpha.dir/src/tcp_server.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/tcp_server.cc.o: ../src/tcp_server.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/alpha.dir/src/tcp_server.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/tcp_server.cc.o -c /home/mz/workspace/AlphaMin/src/tcp_server.cc
+CMakeFiles/alpha.dir/alpha/tcp_server.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/tcp_server.cc.o: ../alpha/tcp_server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/alpha.dir/alpha/tcp_server.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/tcp_server.cc.o -c /home/mz/workspace/AlphaMin/alpha/tcp_server.cc
 
-CMakeFiles/alpha.dir/src/tcp_server.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/tcp_server.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/tcp_server.cc > CMakeFiles/alpha.dir/src/tcp_server.cc.i
+CMakeFiles/alpha.dir/alpha/tcp_server.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/tcp_server.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/tcp_server.cc > CMakeFiles/alpha.dir/alpha/tcp_server.cc.i
 
-CMakeFiles/alpha.dir/src/tcp_server.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/tcp_server.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/tcp_server.cc -o CMakeFiles/alpha.dir/src/tcp_server.cc.s
+CMakeFiles/alpha.dir/alpha/tcp_server.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/tcp_server.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/tcp_server.cc -o CMakeFiles/alpha.dir/alpha/tcp_server.cc.s
 
-CMakeFiles/alpha.dir/src/thread.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/thread.cc.o: ../src/thread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/alpha.dir/src/thread.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/thread.cc.o -c /home/mz/workspace/AlphaMin/src/thread.cc
+CMakeFiles/alpha.dir/alpha/thread.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/thread.cc.o: ../alpha/thread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/alpha.dir/alpha/thread.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/thread.cc.o -c /home/mz/workspace/AlphaMin/alpha/thread.cc
 
-CMakeFiles/alpha.dir/src/thread.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/thread.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/thread.cc > CMakeFiles/alpha.dir/src/thread.cc.i
+CMakeFiles/alpha.dir/alpha/thread.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/thread.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/thread.cc > CMakeFiles/alpha.dir/alpha/thread.cc.i
 
-CMakeFiles/alpha.dir/src/thread.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/thread.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/thread.cc -o CMakeFiles/alpha.dir/src/thread.cc.s
+CMakeFiles/alpha.dir/alpha/thread.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/thread.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/thread.cc -o CMakeFiles/alpha.dir/alpha/thread.cc.s
 
-CMakeFiles/alpha.dir/src/timer.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/timer.cc.o: ../src/timer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/alpha.dir/src/timer.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/timer.cc.o -c /home/mz/workspace/AlphaMin/src/timer.cc
+CMakeFiles/alpha.dir/alpha/timer.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/timer.cc.o: ../alpha/timer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/alpha.dir/alpha/timer.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/timer.cc.o -c /home/mz/workspace/AlphaMin/alpha/timer.cc
 
-CMakeFiles/alpha.dir/src/timer.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/timer.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/timer.cc > CMakeFiles/alpha.dir/src/timer.cc.i
+CMakeFiles/alpha.dir/alpha/timer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/timer.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/timer.cc > CMakeFiles/alpha.dir/alpha/timer.cc.i
 
-CMakeFiles/alpha.dir/src/timer.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/timer.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/timer.cc -o CMakeFiles/alpha.dir/src/timer.cc.s
+CMakeFiles/alpha.dir/alpha/timer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/timer.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/timer.cc -o CMakeFiles/alpha.dir/alpha/timer.cc.s
 
-CMakeFiles/alpha.dir/src/util.cc.o: CMakeFiles/alpha.dir/flags.make
-CMakeFiles/alpha.dir/src/util.cc.o: ../src/util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/alpha.dir/src/util.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/src/util.cc.o -c /home/mz/workspace/AlphaMin/src/util.cc
+CMakeFiles/alpha.dir/alpha/util.cc.o: CMakeFiles/alpha.dir/flags.make
+CMakeFiles/alpha.dir/alpha/util.cc.o: ../alpha/util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/alpha.dir/alpha/util.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alpha.dir/alpha/util.cc.o -c /home/mz/workspace/AlphaMin/alpha/util.cc
 
-CMakeFiles/alpha.dir/src/util.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/src/util.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/src/util.cc > CMakeFiles/alpha.dir/src/util.cc.i
+CMakeFiles/alpha.dir/alpha/util.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alpha.dir/alpha/util.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mz/workspace/AlphaMin/alpha/util.cc > CMakeFiles/alpha.dir/alpha/util.cc.i
 
-CMakeFiles/alpha.dir/src/util.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/src/util.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/src/util.cc -o CMakeFiles/alpha.dir/src/util.cc.s
+CMakeFiles/alpha.dir/alpha/util.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alpha.dir/alpha/util.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mz/workspace/AlphaMin/alpha/util.cc -o CMakeFiles/alpha.dir/alpha/util.cc.s
 
 # Object files for target alpha
 alpha_OBJECTS = \
-"CMakeFiles/alpha.dir/src/address.cc.o" \
-"CMakeFiles/alpha.dir/src/bytearray.cc.o" \
-"CMakeFiles/alpha.dir/src/config.cc.o" \
-"CMakeFiles/alpha.dir/src/env.cc.o" \
-"CMakeFiles/alpha.dir/src/fd_manager.cc.o" \
-"CMakeFiles/alpha.dir/src/fiber.cc.o" \
-"CMakeFiles/alpha.dir/src/hook.cc.o" \
-"CMakeFiles/alpha.dir/src/iomanager.cc.o" \
-"CMakeFiles/alpha.dir/src/log.cc.o" \
-"CMakeFiles/alpha.dir/src/mutex.cc.o" \
-"CMakeFiles/alpha.dir/src/scheduler.cc.o" \
-"CMakeFiles/alpha.dir/src/socket.cc.o" \
-"CMakeFiles/alpha.dir/src/stream.cc.o" \
-"CMakeFiles/alpha.dir/src/tcp_server.cc.o" \
-"CMakeFiles/alpha.dir/src/thread.cc.o" \
-"CMakeFiles/alpha.dir/src/timer.cc.o" \
-"CMakeFiles/alpha.dir/src/util.cc.o"
+"CMakeFiles/alpha.dir/alpha/address.cc.o" \
+"CMakeFiles/alpha.dir/alpha/bytearray.cc.o" \
+"CMakeFiles/alpha.dir/alpha/config.cc.o" \
+"CMakeFiles/alpha.dir/alpha/env.cc.o" \
+"CMakeFiles/alpha.dir/alpha/fd_manager.cc.o" \
+"CMakeFiles/alpha.dir/alpha/fiber.cc.o" \
+"CMakeFiles/alpha.dir/alpha/hook.cc.o" \
+"CMakeFiles/alpha.dir/alpha/iomanager.cc.o" \
+"CMakeFiles/alpha.dir/alpha/log.cc.o" \
+"CMakeFiles/alpha.dir/alpha/mutex.cc.o" \
+"CMakeFiles/alpha.dir/alpha/scheduler.cc.o" \
+"CMakeFiles/alpha.dir/alpha/socket.cc.o" \
+"CMakeFiles/alpha.dir/alpha/stream.cc.o" \
+"CMakeFiles/alpha.dir/alpha/tcp_server.cc.o" \
+"CMakeFiles/alpha.dir/alpha/thread.cc.o" \
+"CMakeFiles/alpha.dir/alpha/timer.cc.o" \
+"CMakeFiles/alpha.dir/alpha/util.cc.o"
 
 # External object files for target alpha
 alpha_EXTERNAL_OBJECTS =
 
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/address.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/bytearray.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/config.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/env.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/fd_manager.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/fiber.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/hook.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/iomanager.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/log.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/mutex.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/scheduler.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/socket.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/stream.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/tcp_server.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/thread.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/timer.cc.o
-../lib/libalpha.so: CMakeFiles/alpha.dir/src/util.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/address.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/bytearray.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/config.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/env.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/fd_manager.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/fiber.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/hook.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/iomanager.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/log.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/mutex.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/scheduler.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/socket.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/stream.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/tcp_server.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/thread.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/timer.cc.o
+../lib/libalpha.so: CMakeFiles/alpha.dir/alpha/util.cc.o
 ../lib/libalpha.so: CMakeFiles/alpha.dir/build.make
 ../lib/libalpha.so: CMakeFiles/alpha.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mz/workspace/AlphaMin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX shared library ../lib/libalpha.so"
