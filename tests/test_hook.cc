@@ -63,8 +63,8 @@ void test_sock() {
 }
 
 int main(int argc, char** argv) {
-    // test_sleep();
-    alphaMin::IOManager iom;
-    iom.schedule(test_sock);
+    test_sleep();
+    // alphaMin::IOManager iom;
+    // iom.schedule(test_sock);
     return 0;
 }

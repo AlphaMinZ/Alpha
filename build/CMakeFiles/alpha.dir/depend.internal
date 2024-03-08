@@ -73,6 +73,31 @@ CMakeFiles/alpha.dir/alpha/hook.cc.o
  /home/mz/workspace/AlphaMin/alpha/thread.h
  /home/mz/workspace/AlphaMin/alpha/timer.h
  /home/mz/workspace/AlphaMin/alpha/util.h
+CMakeFiles/alpha.dir/alpha/http/http.cc.o
+ /home/mz/workspace/AlphaMin/alpha/http/http.cc
+ /home/mz/workspace/AlphaMin/alpha/http/http.h
+CMakeFiles/alpha.dir/alpha/http/http11_parser.rl.cc.o
+ /home/mz/workspace/AlphaMin/alpha/http/http11_common.h
+ /home/mz/workspace/AlphaMin/alpha/http/http11_parser.h
+ /home/mz/workspace/AlphaMin/alpha/http/http11_parser.rl.cc
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o
+ /home/mz/workspace/AlphaMin/alpha/config.h
+ /home/mz/workspace/AlphaMin/alpha/http/http.h
+ /home/mz/workspace/AlphaMin/alpha/http/http11_common.h
+ /home/mz/workspace/AlphaMin/alpha/http/http11_parser.h
+ /home/mz/workspace/AlphaMin/alpha/http/http_parser.cc
+ /home/mz/workspace/AlphaMin/alpha/http/http_parser.h
+ /home/mz/workspace/AlphaMin/alpha/http/httpclient_parser.h
+ /home/mz/workspace/AlphaMin/alpha/log.h
+ /home/mz/workspace/AlphaMin/alpha/mutex.h
+ /home/mz/workspace/AlphaMin/alpha/noncopyable.h
+ /home/mz/workspace/AlphaMin/alpha/singleton.h
+ /home/mz/workspace/AlphaMin/alpha/thread.h
+ /home/mz/workspace/AlphaMin/alpha/util.h
+CMakeFiles/alpha.dir/alpha/http/httpclient_parser.rl.cc.o
+ /home/mz/workspace/AlphaMin/alpha/http/http11_common.h
+ /home/mz/workspace/AlphaMin/alpha/http/httpclient_parser.h
+ /home/mz/workspace/AlphaMin/alpha/http/httpclient_parser.rl.cc
 CMakeFiles/alpha.dir/alpha/iomanager.cc.o
  /home/mz/workspace/AlphaMin/alpha/fiber.h
  /home/mz/workspace/AlphaMin/alpha/iomanager.cc

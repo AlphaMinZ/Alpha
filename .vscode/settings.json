@@ -50,6 +50,8 @@
         "bitset": "cpp",
         "unordered_set": "cpp",
         "typeindex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "mutex": "cpp",
+        "system_error": "cpp"
     }
 }

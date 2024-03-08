@@ -73,6 +73,31 @@ CMakeFiles/alpha.dir/alpha/hook.cc.o: ../alpha/thread.h
 CMakeFiles/alpha.dir/alpha/hook.cc.o: ../alpha/timer.h
 CMakeFiles/alpha.dir/alpha/hook.cc.o: ../alpha/util.h
 
+CMakeFiles/alpha.dir/alpha/http/http.cc.o: ../alpha/http/http.cc
+CMakeFiles/alpha.dir/alpha/http/http.cc.o: ../alpha/http/http.h
+
+CMakeFiles/alpha.dir/alpha/http/http11_parser.rl.cc.o: ../alpha/http/http11_common.h
+CMakeFiles/alpha.dir/alpha/http/http11_parser.rl.cc.o: ../alpha/http/http11_parser.h
+CMakeFiles/alpha.dir/alpha/http/http11_parser.rl.cc.o: ../alpha/http/http11_parser.rl.cc
+
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/config.h
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/http/http.h
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/http/http11_common.h
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/http/http11_parser.h
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/http/http_parser.cc
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/http/http_parser.h
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/http/httpclient_parser.h
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/log.h
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/mutex.h
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/noncopyable.h
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/singleton.h
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/thread.h
+CMakeFiles/alpha.dir/alpha/http/http_parser.cc.o: ../alpha/util.h
+
+CMakeFiles/alpha.dir/alpha/http/httpclient_parser.rl.cc.o: ../alpha/http/http11_common.h
+CMakeFiles/alpha.dir/alpha/http/httpclient_parser.rl.cc.o: ../alpha/http/httpclient_parser.h
+CMakeFiles/alpha.dir/alpha/http/httpclient_parser.rl.cc.o: ../alpha/http/httpclient_parser.rl.cc
+
 CMakeFiles/alpha.dir/alpha/iomanager.cc.o: ../alpha/fiber.h
 CMakeFiles/alpha.dir/alpha/iomanager.cc.o: ../alpha/iomanager.cc
 CMakeFiles/alpha.dir/alpha/iomanager.cc.o: ../alpha/iomanager.h

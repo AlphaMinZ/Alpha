@@ -73,6 +73,31 @@ CMakeFiles/test_http_parser.dir/alpha/hook.cc.o: ../alpha/thread.h
 CMakeFiles/test_http_parser.dir/alpha/hook.cc.o: ../alpha/timer.h
 CMakeFiles/test_http_parser.dir/alpha/hook.cc.o: ../alpha/util.h
 
+CMakeFiles/test_http_parser.dir/alpha/http/http.cc.o: ../alpha/http/http.cc
+CMakeFiles/test_http_parser.dir/alpha/http/http.cc.o: ../alpha/http/http.h
+
+CMakeFiles/test_http_parser.dir/alpha/http/http11_parser.rl.cc.o: ../alpha/http/http11_common.h
+CMakeFiles/test_http_parser.dir/alpha/http/http11_parser.rl.cc.o: ../alpha/http/http11_parser.h
+CMakeFiles/test_http_parser.dir/alpha/http/http11_parser.rl.cc.o: ../alpha/http/http11_parser.rl.cc
+
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/config.h
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/http/http.h
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/http/http11_common.h
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/http/http11_parser.h
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/http/http_parser.cc
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/http/http_parser.h
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/http/httpclient_parser.h
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/log.h
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/mutex.h
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/noncopyable.h
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/singleton.h
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/thread.h
+CMakeFiles/test_http_parser.dir/alpha/http/http_parser.cc.o: ../alpha/util.h
+
+CMakeFiles/test_http_parser.dir/alpha/http/httpclient_parser.rl.cc.o: ../alpha/http/http11_common.h
+CMakeFiles/test_http_parser.dir/alpha/http/httpclient_parser.rl.cc.o: ../alpha/http/httpclient_parser.h
+CMakeFiles/test_http_parser.dir/alpha/http/httpclient_parser.rl.cc.o: ../alpha/http/httpclient_parser.rl.cc
+
 CMakeFiles/test_http_parser.dir/alpha/iomanager.cc.o: ../alpha/fiber.h
 CMakeFiles/test_http_parser.dir/alpha/iomanager.cc.o: ../alpha/iomanager.cc
 CMakeFiles/test_http_parser.dir/alpha/iomanager.cc.o: ../alpha/iomanager.h
@@ -167,6 +192,11 @@ CMakeFiles/test_http_parser.dir/alpha/util.cc.o: ../alpha/thread.h
 CMakeFiles/test_http_parser.dir/alpha/util.cc.o: ../alpha/util.cc
 CMakeFiles/test_http_parser.dir/alpha/util.cc.o: ../alpha/util.h
 
+CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.o: ../alpha/http/http.h
+CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.o: ../alpha/http/http11_common.h
+CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.o: ../alpha/http/http11_parser.h
+CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.o: ../alpha/http/http_parser.h
+CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.o: ../alpha/http/httpclient_parser.h
 CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.o: ../alpha/log.h
 CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.o: ../alpha/mutex.h
 CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.o: ../alpha/noncopyable.h
