@@ -212,10 +212,76 @@ public:
     void unlock() {
         pthread_mutex_unlock(&m_mutex);
     }
+
+    pthread_mutex_t& getMutex() {
+        return m_mutex;
+    }
+
 private:
     /// mutex
     pthread_mutex_t m_mutex;
 };
+
+// /**
+//  * @brief 条件变量
+//  */
+// class ConditionVariable : Noncopyable {
+// public:
+//     /**
+//      * @brief 构造函数
+//      */
+//     ConditionVariable() {
+//         pthread_cond_init(&m_cond, nullptr);
+//     }
+
+//     /**
+//      * @brief 析构函数
+//      */
+//     ~ConditionVariable() {
+//         pthread_cond_destroy(&m_cond);
+//     }
+
+//     /**
+//      * @brief 等待条件满足
+//      * @param[in] mutex 与条件变量配合使用的互斥量
+//      */
+//     void wait(Mutex& mutex) {
+//         pthread_cond_wait(&m_cond, &mutex.getMutex());
+//     }
+
+//     /**
+//      * @brief 等待一段时间或者条件满足
+//      * @param[in] mutex 与条件变量配合使用的互斥量
+//      * @param[in] timeout 等待的超时时间
+//      * @return true 如果条件满足，否则返回false（超时或者被唤醒）
+//      */
+//     bool waitFor(Mutex& mutex, int timeout) {
+//         struct timespec ts;
+//         clock_gettime(CLOCK_REALTIME, &ts);
+//         ts.tv_sec += timeout / 1000;
+//         ts.tv_nsec += (timeout % 1000) * 1000 * 1000;
+//         int ret = pthread_cond_timedwait(&m_cond, &mutex.getMutex(), &ts);
+//         return ret == 0;
+//     }
+
+//     /**
+//      * @brief 唤醒一个等待的线程
+//      */
+//     void notify() {
+//         pthread_cond_signal(&m_cond);
+//     }
+
+//     /**
+//      * @brief 唤醒所有等待的线程
+//      */
+//     void notifyAll() {
+//         pthread_cond_broadcast(&m_cond);
+//     }
+
+// private:
+//     /// 条件变量
+//     pthread_cond_t m_cond;
+// };
 
 /**
  * @brief 空锁(用于调试)

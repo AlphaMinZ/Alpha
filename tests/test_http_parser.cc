@@ -41,7 +41,7 @@ const char test_response_data[] = "HTTP/1.1 200 OK\r\n"
 void test_response() {
     alphaMin::http::HttpResponseParser::ptr parser(new alphaMin::http::HttpResponseParser);
     std::string tmp = test_response_data;
-    size_t s = parser->execute(&tmp[0], tmp.size());
+    size_t s = parser->execute(&tmp[0], tmp.size(), true);
     ALPHA_LOG_INFO(g_logger) << "execute rt=" << s  
         << " has_error=" << parser->hasError()
         << " is_finished=" << parser->isFinished()

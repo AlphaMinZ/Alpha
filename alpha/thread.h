@@ -5,6 +5,8 @@
 
 namespace alphaMin {
 
+class Processor;
+
 //线程类
 class Thread : Noncopyable {
 public:
@@ -44,7 +46,6 @@ private:
     std::string m_name;
 
     Semaphore m_semaphore;
-
 
 };
 

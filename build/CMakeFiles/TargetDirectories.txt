@@ -1,4 +1,4 @@
-/home/mz/workspace/AlphaMin/build/CMakeFiles/edit_cache.dir
-/home/mz/workspace/AlphaMin/build/CMakeFiles/rebuild_cache.dir
-/home/mz/workspace/AlphaMin/build/CMakeFiles/test_http_parser.dir
-/home/mz/workspace/AlphaMin/build/CMakeFiles/alpha.dir
+/home/mz/workspace/CPP/Alpha/build/CMakeFiles/rebuild_cache.dir
+/home/mz/workspace/CPP/Alpha/build/CMakeFiles/test_chan.dir
+/home/mz/workspace/CPP/Alpha/build/CMakeFiles/edit_cache.dir
+/home/mz/workspace/CPP/Alpha/build/CMakeFiles/alpha.dir

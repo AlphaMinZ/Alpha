@@ -1,6 +1,9 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.6.2)
 
 project(AlphaMin)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+# include(cmake/utils.cmake)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -9,6 +12,7 @@ include_directories(./alpha)
 file(GLOB SRC 
     ${CMAKE_CURRENT_SOURCE_DIR}/alpha/*.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/alpha/http/*.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/alpha/db/*.cc
 )
 
 set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib)
@@ -21,16 +25,24 @@ if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})
 endif()
 
+find_package(MySQL REQUIRED)
+if(MYSQL_FOUND)
+    include_directories(${MYSQL_INCLUDE_DIR})
+endif()
+
 find_package(OpenSSL REQUIRED)
 if(OPENSSL_FOUND)
     include_directories(${OPENSSL_INCLUDE_DIR})
 endif()
+
+find_library(PTHREAD pthread)
 
 set(
     LIB_LIB
     pthread
     yaml-cpp
     dl
+    mysqlclient
     ${OPENSSL_LIBRARIES}
 )
 
@@ -70,8 +82,32 @@ set(
 # add_executable(test_http tests/test_http.cc ${SRC})
 # target_link_libraries(test_http ${LIB_LIB})
 
-add_executable(test_http_parser tests/test_http_parser.cc ${SRC})
-target_link_libraries(test_http_parser ${LIB_LIB})
+# add_executable(test_http_parser tests/test_http_parser.cc ${SRC})
+# target_link_libraries(test_http_parser ${LIB_LIB})
+
+# add_executable(echo_server examples/echo_server.cc ${SRC})
+# target_link_libraries(echo_server ${LIB_LIB})
+
+# add_executable(test_http_server tests/test_http_server.cc ${SRC})
+# target_link_libraries(test_http_server ${LIB_LIB})
+
+# add_executable(test_http_connection tests/test_http_connection.cc ${SRC})
+# target_link_libraries(test_http_connection ${LIB_LIB})
+
+# add_executable(test_mysql tests/test_mysql.cc ${SRC})
+# target_link_libraries(test_mysql ${LIB_LIB})
+
+# add_executable(test_multiplexer tests/test_multiplexer.cc ${SRC})
+# target_link_libraries(test_multiplexer ${LIB_LIB})
+
+# add_executable(test_fiber_sync tests/test_fiber_sync.cc ${SRC})
+# target_link_libraries(test_fiber_sync ${LIB_LIB})
+
+# add_executable(test_fiber_cond tests/test_fiber_cond.cc ${SRC})
+# target_link_libraries(test_fiber_cond ${LIB_LIB})
+
+add_executable(test_chan tests/test_chan.cc ${SRC})
+target_link_libraries(test_chan ${LIB_LIB})
 
 SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 SET(CMAKE_BUILD_TYPE "Debug")  # 定义编译类型

@@ -1,12 +1,12 @@
 
   const char features[] = {"\n"
 "CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 404 && __cplusplus
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 500 && __cplusplus >= 201402L
 "1"
 #else
 "0"
 #endif
-"cxx_template_template_parameters\n"
+"cxx_aggregate_default_initializers\n"
 "CXX_FEATURE:"
 #if (__GNUC__ * 100 + __GNUC_MINOR__) >= 407 && __cplusplus >= 201103L
 "1"
@@ -36,12 +36,26 @@
 #endif
 "cxx_attributes\n"
 "CXX_FEATURE:"
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
+"1"
+#else
+"0"
+#endif
+"cxx_attribute_deprecated\n"
+"CXX_FEATURE:"
 #if (__GNUC__ * 100 + __GNUC_MINOR__) >= 404 && (__cplusplus >= 201103L || (defined(__GXX_EXPERIMENTAL_CXX0X__) && __GXX_EXPERIMENTAL_CXX0X__))
 "1"
 #else
 "0"
 #endif
 "cxx_auto_type\n"
+"CXX_FEATURE:"
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
+"1"
+#else
+"0"
+#endif
+"cxx_binary_literals\n"
 "CXX_FEATURE:"
 #if (__GNUC__ * 100 + __GNUC_MINOR__) >= 406 && (__cplusplus >= 201103L || (defined(__GXX_EXPERIMENTAL_CXX0X__) && __GXX_EXPERIMENTAL_CXX0X__))
 "1"
@@ -50,12 +64,26 @@
 #endif
 "cxx_constexpr\n"
 "CXX_FEATURE:"
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
+"1"
+#else
+"0"
+#endif
+"cxx_contextual_conversions\n"
+"CXX_FEATURE:"
 #if (__GNUC__ * 100 + __GNUC_MINOR__) >= 404 && (__cplusplus >= 201103L || (defined(__GXX_EXPERIMENTAL_CXX0X__) && __GXX_EXPERIMENTAL_CXX0X__))
 "1"
 #else
 "0"
 #endif
 "cxx_decltype\n"
+"CXX_FEATURE:"
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
+"1"
+#else
+"0"
+#endif
+"cxx_decltype_auto\n"
 "CXX_FEATURE:"
 #if ((__GNUC__ * 10000 + __GNUC_MINOR__ * 100 + __GNUC_PATCHLEVEL__) >= 40801) && __cplusplus >= 201103L
 "1"
@@ -98,6 +126,13 @@
 "0"
 #endif
 "cxx_deleted_functions\n"
+"CXX_FEATURE:"
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
+"1"
+#else
+"0"
+#endif
+"cxx_digit_separators\n"
 "CXX_FEATURE:"
 #if (__GNUC__ * 100 + __GNUC_MINOR__) >= 406 && (__cplusplus >= 201103L || (defined(__GXX_EXPERIMENTAL_CXX0X__) && __GXX_EXPERIMENTAL_CXX0X__))
 "1"
@@ -148,6 +183,13 @@
 #endif
 "cxx_generalized_initializers\n"
 "CXX_FEATURE:"
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
+"1"
+#else
+"0"
+#endif
+"cxx_generic_lambdas\n"
+"CXX_FEATURE:"
 #if (__GNUC__ * 100 + __GNUC_MINOR__) >= 408 && __cplusplus >= 201103L
 "1"
 #else
@@ -168,6 +210,13 @@
 "0"
 #endif
 "cxx_lambdas\n"
+"CXX_FEATURE:"
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
+"1"
+#else
+"0"
+#endif
+"cxx_lambda_init_captures\n"
 "CXX_FEATURE:"
 #if (__GNUC__ * 100 + __GNUC_MINOR__) >= 405 && (__cplusplus >= 201103L || (defined(__GXX_EXPERIMENTAL_CXX0X__) && __GXX_EXPERIMENTAL_CXX0X__))
 "1"
@@ -232,6 +281,20 @@
 #endif
 "cxx_reference_qualified_functions\n"
 "CXX_FEATURE:"
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 500 && __cplusplus >= 201402L
+"1"
+#else
+"0"
+#endif
+"cxx_relaxed_constexpr\n"
+"CXX_FEATURE:"
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
+"1"
+#else
+"0"
+#endif
+"cxx_return_type_deduction\n"
+"CXX_FEATURE:"
 #if (__GNUC__ * 100 + __GNUC_MINOR__) >= 404 && (__cplusplus >= 201103L || (defined(__GXX_EXPERIMENTAL_CXX0X__) && __GXX_EXPERIMENTAL_CXX0X__))
 "1"
 #else
@@ -266,6 +329,13 @@
 "0"
 #endif
 "cxx_strong_enums\n"
+"CXX_FEATURE:"
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 404 && __cplusplus
+"1"
+#else
+"0"
+#endif
+"cxx_template_template_parameters\n"
 "CXX_FEATURE:"
 #if (__GNUC__ * 100 + __GNUC_MINOR__) >= 408 && __cplusplus >= 201103L
 "1"
@@ -309,6 +379,13 @@
 #endif
 "cxx_user_literals\n"
 "CXX_FEATURE:"
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 500 && __cplusplus >= 201402L
+"1"
+#else
+"0"
+#endif
+"cxx_variable_templates\n"
+"CXX_FEATURE:"
 #if (__GNUC__ * 100 + __GNUC_MINOR__) >= 404 && (__cplusplus >= 201103L || (defined(__GXX_EXPERIMENTAL_CXX0X__) && __GXX_EXPERIMENTAL_CXX0X__))
 "1"
 #else
@@ -322,83 +399,6 @@
 "0"
 #endif
 "cxx_variadic_templates\n"
-"CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 500 && __cplusplus >= 201402L
-"1"
-#else
-"0"
-#endif
-"cxx_aggregate_default_initializers\n"
-"CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
-"1"
-#else
-"0"
-#endif
-"cxx_attribute_deprecated\n"
-"CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
-"1"
-#else
-"0"
-#endif
-"cxx_binary_literals\n"
-"CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
-"1"
-#else
-"0"
-#endif
-"cxx_contextual_conversions\n"
-"CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
-"1"
-#else
-"0"
-#endif
-"cxx_decltype_auto\n"
-"CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
-"1"
-#else
-"0"
-#endif
-"cxx_digit_separators\n"
-"CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
-"1"
-#else
-"0"
-#endif
-"cxx_generic_lambdas\n"
-"CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
-"1"
-#else
-"0"
-#endif
-"cxx_lambda_init_captures\n"
-"CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 500 && __cplusplus >= 201402L
-"1"
-#else
-"0"
-#endif
-"cxx_relaxed_constexpr\n"
-"CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 409 && __cplusplus > 201103L
-"1"
-#else
-"0"
-#endif
-"cxx_return_type_deduction\n"
-"CXX_FEATURE:"
-#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 500 && __cplusplus >= 201402L
-"1"
-#else
-"0"
-#endif
-"cxx_variable_templates\n"
 
 };
 

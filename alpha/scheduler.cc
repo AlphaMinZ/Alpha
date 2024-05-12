@@ -135,7 +135,6 @@ void Scheduler::run() {
                     continue;
                 }
 
-
                 if(it->fiber && it->fiber->getState() == Fiber::EXEC) {
                     ++it;
                     continue;
