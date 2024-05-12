@@ -1,4 +1,0 @@
-/home/mz/workspace/CPP/Alpha/build/CMakeFiles/rebuild_cache.dir
-/home/mz/workspace/CPP/Alpha/build/CMakeFiles/test_chan.dir
-/home/mz/workspace/CPP/Alpha/build/CMakeFiles/edit_cache.dir
-/home/mz/workspace/CPP/Alpha/build/CMakeFiles/alpha.dir
