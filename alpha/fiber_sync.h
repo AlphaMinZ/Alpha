@@ -27,7 +27,8 @@ public:
         if (!m_waiting.empty()) {
             auto next = m_waiting.front();
             m_waiting.pop_front();
-            Scheduler::GetThis()->schedule(next);
+            // Scheduler::GetThis()->schedule(next);
+            IOManager::GetThis()->schedule(next);
         }
     }
 
@@ -51,7 +52,8 @@ public:
         if(!m_waiting.empty()) {
             auto next = m_waiting.front();
             m_waiting.pop_front();
-            Scheduler::GetThis()->schedule(next);
+            // Scheduler::GetThis()->schedule(next);
+            IOManager::GetThis()->schedule(next);
         }
     }
 
@@ -59,7 +61,8 @@ public:
         while(!m_waiting.empty()) {
             auto next = m_waiting.front();
             m_waiting.pop_front();
-            Scheduler::GetThis()->schedule(next);
+            // Scheduler::GetThis()->schedule(next);
+            IOManager::GetThis()->schedule(next);
         }
     }
 

@@ -57,8 +57,51 @@ public:
     }
 
     // 接受数据
-    std::pair<T, bool> receive() {
-        T data;
+    // std::pair<T, bool> receive() {
+    //     T data;
+    //     bool closed = false;
+    //     if(m_block) {
+    //         m_mutex.lock();
+    //         while(m_queue.empty() && !m_closed) {
+    //             m_notEmpty.wait(m_mutex);
+    //         }
+    //         if(m_queue.empty() && m_closed) {
+    //             closed = true;
+    //         } else {
+    //             data = m_queue.front();
+    //             m_queue.pop();
+    //             m_notFull.notify_one();
+    //         }
+    //         m_mutex.unlock();
+    //     } else {
+    //         std::pair<T, bool> result = tryReceive();
+    //         data = result.first;
+    //         closed = result.second;
+    //     }
+    //     return std::make_pair(data, closed);
+    // }
+
+    // // 非阻塞接收数据，返回是否成功
+    // std::pair<T, bool> tryReceive() {
+    //     T data;
+    //     bool closed = false;
+    //     m_mutex.lock();
+    //     if(m_queue.empty() && !m_closed) {
+    //         m_mutex.unlock();
+    //         return std::make_pair(data, closed);
+    //     }
+    //     if(m_queue.empty() && m_closed) {
+    //         closed = true;
+    //     } else {
+    //         data = m_queue.front();
+    //         m_queue.pop();
+    //         m_notFull.notify_one();
+    //     }
+    //     m_mutex.unlock();
+    //     return std::make_pair(data, closed);
+    // }
+    std::pair<std::unique_ptr<T>, bool> receive() {
+        std::unique_ptr<T> data;
         bool closed = false;
         if(m_block) {
             m_mutex.lock();
@@ -67,38 +110,39 @@ public:
             }
             if(m_queue.empty() && m_closed) {
                 closed = true;
+                data = nullptr; // 返回一个空指针
             } else {
-                data = m_queue.front();
+                data.reset(new T(std::move(m_queue.front()))); // 使用 std::unique_ptr 的构造函数
                 m_queue.pop();
                 m_notFull.notify_one();
             }
             m_mutex.unlock();
         } else {
-            std::pair<T, bool> result = tryReceive();
-            data = result.first;
+            std::pair<std::unique_ptr<T>, bool> result = tryReceive();
+            data = std::move(result.first);
             closed = result.second;
         }
-        return std::make_pair(data, closed);
+        return std::make_pair(std::move(data), closed);
     }
 
-    // 非阻塞接收数据，返回是否成功
-    std::pair<T, bool> tryReceive() {
-        T data;
+    std::pair<std::unique_ptr<T>, bool> tryReceive() {
+        std::unique_ptr<T> data;
         bool closed = false;
         m_mutex.lock();
         if(m_queue.empty() && !m_closed) {
             m_mutex.unlock();
-            return std::make_pair(data, closed);
+            return std::make_pair(std::move(data), closed);
         }
         if(m_queue.empty() && m_closed) {
             closed = true;
+            data = nullptr; // 返回一个空指针
         } else {
-            data = m_queue.front();
+            data.reset(new T(std::move(m_queue.front()))); // 使用 std::unique_ptr 的构造函数
             m_queue.pop();
             m_notFull.notify_one();
         }
         m_mutex.unlock();
-        return std::make_pair(data, closed);
+        return std::make_pair(std::move(data), closed);
     }
 
     // close chan
