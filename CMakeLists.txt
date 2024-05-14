@@ -106,8 +106,11 @@ set(
 # add_executable(test_fiber_cond tests/test_fiber_cond.cc ${SRC})
 # target_link_libraries(test_fiber_cond ${LIB_LIB})
 
-add_executable(test_chan tests/test_chan.cc ${SRC})
-target_link_libraries(test_chan ${LIB_LIB})
+# add_executable(test_chan tests/test_chan.cc ${SRC})
+# target_link_libraries(test_chan ${LIB_LIB})
+
+add_executable(test_pool tests/test_pool.cc ${SRC})
+target_link_libraries(test_pool ${LIB_LIB})
 
 SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 SET(CMAKE_BUILD_TYPE "Debug")  # 定义编译类型
