@@ -52,6 +52,11 @@ void test(alphaMin::ObjectPool<MyObject>& pool) {
 
     ALPHA_LOG_INFO(logger) << "============================================";
 
+    MyObject::ptr obj(new MyObject);
+    pool.put(obj);
+
+    ALPHA_LOG_INFO(logger) << "============================================";
+
     pool.close();
 
     ALPHA_LOG_INFO(logger) << "pool's size = " << pool.get_size() << " maxSize = " << pool.get_maxSize();
@@ -62,6 +67,8 @@ int main(int argc, char** argv) {
     alphaMin::ObjectPool<MyObject> pool(5);
 
     alphaMin::IOManager iom(2);
+
+    
 
     iom.schedule([&pool]() {
         test(pool);

@@ -9,6 +9,8 @@
 
 namespace alphaMin {
 
+static alphaMin::Logger::ptr g_logger = ALPHA_LOG_NAME("system");
+
 template<class T>
 class Chan {
 public:
@@ -23,12 +25,12 @@ public:
     bool send(const T& data) {
         if(m_block) {
             m_mutex.lock();
-            while(m_capacity > 0 && m_queue.size() >= m_capacity) {
-                m_notFull.wait(m_mutex);
-            }
             if(m_closed) {
                 m_mutex.unlock();
                 throw std::runtime_error("send on closed channel");
+            }
+            while(m_capacity > 0 && m_queue.size() >= m_capacity) {
+                m_notFull.wait(m_mutex);
             }
             m_queue.push(data);
             m_notEmpty.notify_one();
@@ -42,7 +44,7 @@ public:
     // 非阻塞发送数据到通道，返回是否成功
     bool trySend(const T& data) {
         m_mutex.lock();
-        if(m_block && m_closed) {
+        if(m_closed) {
             m_mutex.unlock();
             return false;
         }
@@ -56,72 +58,42 @@ public:
         return true;
     }
 
-    // 接受数据
-    // std::pair<T, bool> receive() {
-    //     T data;
-    //     bool closed = false;
-    //     if(m_block) {
-    //         m_mutex.lock();
-    //         while(m_queue.empty() && !m_closed) {
-    //             m_notEmpty.wait(m_mutex);
-    //         }
-    //         if(m_queue.empty() && m_closed) {
-    //             closed = true;
-    //         } else {
-    //             data = m_queue.front();
-    //             m_queue.pop();
-    //             m_notFull.notify_one();
-    //         }
-    //         m_mutex.unlock();
-    //     } else {
-    //         std::pair<T, bool> result = tryReceive();
-    //         data = result.first;
-    //         closed = result.second;
-    //     }
-    //     return std::make_pair(data, closed);
-    // }
-
-    // // 非阻塞接收数据，返回是否成功
-    // std::pair<T, bool> tryReceive() {
-    //     T data;
-    //     bool closed = false;
-    //     m_mutex.lock();
-    //     if(m_queue.empty() && !m_closed) {
-    //         m_mutex.unlock();
-    //         return std::make_pair(data, closed);
-    //     }
-    //     if(m_queue.empty() && m_closed) {
-    //         closed = true;
-    //     } else {
-    //         data = m_queue.front();
-    //         m_queue.pop();
-    //         m_notFull.notify_one();
-    //     }
-    //     m_mutex.unlock();
-    //     return std::make_pair(data, closed);
-    // }
     std::pair<std::unique_ptr<T>, bool> receive() {
+        ALPHA_LOG_INFO(g_logger) << "start receive";
         std::unique_ptr<T> data;
         bool closed = false;
         if(m_block) {
+            ALPHA_LOG_INFO(g_logger) << "need lock";
             m_mutex.lock();
             while(m_queue.empty() && !m_closed) {
+                ALPHA_LOG_INFO(g_logger) << "block read, to wait";
                 m_notEmpty.wait(m_mutex);
+                ALPHA_LOG_INFO(g_logger) << "block read, from wait";
             }
             if(m_queue.empty() && m_closed) {
+                ALPHA_LOG_INFO(g_logger) << "chan is empty, and closed";
                 closed = true;
                 data = nullptr; // 返回一个空指针
-            } else {
+            } else if(!m_queue.empty()) {
+                ALPHA_LOG_INFO(g_logger) << "=================";
                 data.reset(new T(std::move(m_queue.front()))); // 使用 std::unique_ptr 的构造函数
+                ALPHA_LOG_INFO(g_logger) << "=================";
                 m_queue.pop();
-                m_notFull.notify_one();
+                if(!m_closed) {
+                    m_notFull.notify_one();
+                }
             }
             m_mutex.unlock();
+            ALPHA_LOG_INFO(g_logger) << "have unlock";
+            if(data == nullptr) {
+                ALPHA_LOG_INFO(g_logger) << "data is nullptr";
+            }
         } else {
             std::pair<std::unique_ptr<T>, bool> result = tryReceive();
             data = std::move(result.first);
             closed = result.second;
         }
+        ALPHA_LOG_INFO(g_logger) << "need to return";
         return std::make_pair(std::move(data), closed);
     }
 
@@ -132,14 +104,12 @@ public:
         if(m_queue.empty() && !m_closed) {
             m_mutex.unlock();
             return std::make_pair(std::move(data), closed);
-        }
-        if(m_queue.empty() && m_closed) {
+        } else if(m_queue.empty() && m_closed) {
             closed = true;
             data = nullptr; // 返回一个空指针
         } else {
             data.reset(new T(std::move(m_queue.front()))); // 使用 std::unique_ptr 的构造函数
             m_queue.pop();
-            m_notFull.notify_one();
         }
         m_mutex.unlock();
         return std::make_pair(std::move(data), closed);
