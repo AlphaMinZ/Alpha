@@ -102,7 +102,7 @@ void send_3(alphaMin::Chan<int>& ch_int, alphaMin::Chan<std::string>& ch_str) {
     // ch_str.close();
 }
 
-void read_3(alphaMin::Chan<int>& ch_int, alphaMin::Chan<std::string>& ch_str) {
+void read_3(alphaMin::Chan<int>::ptr ch_int, alphaMin::Chan<std::string>::ptr ch_str) {
 
     // alphaMin::FiberCondition cond;
     auto cond = std::make_shared<alphaMin::FiberCondition>();
@@ -120,56 +120,62 @@ void read_3(alphaMin::Chan<int>& ch_int, alphaMin::Chan<std::string>& ch_str) {
 
     while(true) {
         if(!result_int->second) {
-            alphaMin::IOManager::GetThis()->schedule([&ch_int, &tmp_int, cond, result_int, mutex]() {
-                ALPHA_LOG_INFO(g_logger) << "start read ch_int====================================";
-                ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
-                ALPHA_LOG_INFO(g_logger) << "result_int's count is " << result_int.use_count();
-                auto result = ch_int.receive();
-                ALPHA_LOG_INFO(g_logger) << "next to lock";
-                ALPHA_LOG_INFO(g_logger) << "mutex's count is " << mutex.use_count();
-                mutex->lock();
-                *result_int = std::move(result);
-                ALPHA_LOG_INFO(g_logger) << "result_int's count is " << result_int.use_count();
-                mutex->unlock();
-                ALPHA_LOG_INFO(g_logger) << "have read from ch_int";
-                auto tmp = std::move(result_int->first);
-                if(tmp == nullptr) {
-                    ALPHA_LOG_INFO(g_logger) << "read a nullptr int";
-                }
-                if(tmp != nullptr) {
-                    tmp_int = *tmp;
-                    ALPHA_LOG_INFO(g_logger) << "tmp_int = " << tmp_int;
-                }
-                ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
-                cond->notify_all();
-                ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
+            // alphaMin::IOManager::GetThis()->schedule([&ch_int, &tmp_int, cond, result_int, mutex]() {
+            //     ALPHA_LOG_INFO(g_logger) << "start read ch_int====================================";
+            //     ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
+            //     ALPHA_LOG_INFO(g_logger) << "result_int's count is " << result_int.use_count();
+            //     auto result = ch_int.receive();
+            //     ALPHA_LOG_INFO(g_logger) << "next to lock";
+            //     ALPHA_LOG_INFO(g_logger) << "mutex's count is " << mutex.use_count();
+            //     mutex->lock();
+            //     *result_int = std::move(result);
+            //     ALPHA_LOG_INFO(g_logger) << "result_int's count is " << result_int.use_count();
+            //     mutex->unlock();
+            //     ALPHA_LOG_INFO(g_logger) << "have read from ch_int";
+            //     auto tmp = std::move(result_int->first);
+            //     if(tmp == nullptr) {
+            //         ALPHA_LOG_INFO(g_logger) << "read a nullptr int";
+            //     }
+            //     if(tmp != nullptr) {
+            //         tmp_int = *tmp;
+            //         ALPHA_LOG_INFO(g_logger) << "tmp_int = " << tmp_int;
+            //     }
+            //     ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
+            //     cond->notify_all();
+            //     ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
+            // });
+            alphaMin::select(ch_int, cond, mutex, result_int, []() {
+                std::cout << "have read from ch_int" << std::endl;
             });
         }
 
         if(!result_str->second) {
-            alphaMin::IOManager::GetThis()->schedule([&ch_str, &tmp_str, cond, result_str, mutex]() {
-                ALPHA_LOG_INFO(g_logger) << "start read ch_str====================================";
-                ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
-                ALPHA_LOG_INFO(g_logger) << "result_str's count is " << result_str.use_count();
-                auto result = ch_str.receive();
-                ALPHA_LOG_INFO(g_logger) << "next to lock";
-                ALPHA_LOG_INFO(g_logger) << "mutex's count is " << mutex.use_count();
-                mutex->lock();
-                *result_str = std::move(result);
-                ALPHA_LOG_INFO(g_logger) << "result_str's count is " << result_str.use_count();
-                mutex->unlock();
-                ALPHA_LOG_INFO(g_logger) << "have read from ch_str";
-                auto tmp = std::move(result_str->first);
-                if(tmp == nullptr) {
-                    ALPHA_LOG_INFO(g_logger) << "read a nullptr str";
-                }
-                if(tmp != nullptr) {
-                    tmp_str = *tmp;
-                    ALPHA_LOG_INFO(g_logger) << "tmp_str = " << tmp_str;
-                }
-                ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
-                cond->notify_all();
-                ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
+            // alphaMin::IOManager::GetThis()->schedule([&ch_str, &tmp_str, cond, result_str, mutex]() {
+            //     ALPHA_LOG_INFO(g_logger) << "start read ch_str====================================";
+            //     ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
+            //     ALPHA_LOG_INFO(g_logger) << "result_str's count is " << result_str.use_count();
+            //     auto result = ch_str.receive();
+            //     ALPHA_LOG_INFO(g_logger) << "next to lock";
+            //     ALPHA_LOG_INFO(g_logger) << "mutex's count is " << mutex.use_count();
+            //     mutex->lock();
+            //     *result_str = std::move(result);
+            //     ALPHA_LOG_INFO(g_logger) << "result_str's count is " << result_str.use_count();
+            //     mutex->unlock();
+            //     ALPHA_LOG_INFO(g_logger) << "have read from ch_str";
+            //     auto tmp = std::move(result_str->first);
+            //     if(tmp == nullptr) {
+            //         ALPHA_LOG_INFO(g_logger) << "read a nullptr str";
+            //     }
+            //     if(tmp != nullptr) {
+            //         tmp_str = *tmp;
+            //         ALPHA_LOG_INFO(g_logger) << "tmp_str = " << tmp_str;
+            //     }
+            //     ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
+            //     cond->notify_all();
+            //     ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
+            // });
+            alphaMin::select(ch_str, cond, mutex, result_str, []() {
+                std::cout << "have read from ch_str" << std::endl;
             });
         }
 
@@ -190,16 +196,16 @@ void read_3(alphaMin::Chan<int>& ch_int, alphaMin::Chan<std::string>& ch_str) {
 }
 
 int main(int argc, char** argv) {
-    alphaMin::Chan<int> ch_int(2);
-    alphaMin::Chan<std::string> ch_str(2);
+    auto ch_int = std::make_shared<alphaMin::Chan<int> >(2);
+    auto ch_str = std::make_shared<alphaMin::Chan<std::string> >(2);
     alphaMin::IOManager iom(3);
     
-    ch_int.close();
-    ch_str.close();
+    ch_int->close();
+    ch_str->close();
 
-    iom.schedule([&ch_int, &ch_str]() {
-        send_3(ch_int, ch_str);
-    });
+    // iom.schedule([&ch_int, &ch_str]() {
+    //     send_3(ch_int, ch_str);
+    // });
 
     // sleep(2);
 

@@ -147,6 +147,22 @@ private:
     bool m_closed; // 通道是否关闭
 };
 
+template<typename T>
+void select(typename Chan<T>::ptr channel, FiberCondition::ptr cond, 
+            FiberMutex::ptr mutex, typename std::shared_ptr<std::pair<std::unique_ptr<T>, bool> > result_ch, 
+            std::function<void()> fc) {
+    IOManager::GetThis()->schedule([channel, cond, mutex, result_ch, fc]() {
+        std::pair<std::unique_ptr<T>, bool> result = channel->receive();
+
+        mutex->lock();
+        *result_ch = std::move(result);
+        mutex->unlock();
+
+        fc();
+        cond->notify_all();
+    });
+}
+
 }
 
 #endif

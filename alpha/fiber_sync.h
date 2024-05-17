@@ -11,6 +11,8 @@ namespace alphaMin {
 // 互斥量
 class FiberMutex {
 public:
+    typedef std::shared_ptr<FiberMutex> ptr;
+
     FiberMutex() = default;
 
     void lock() {
@@ -39,6 +41,8 @@ private:
 
 class FiberCondition {
 public:
+    typedef std::shared_ptr<FiberCondition> ptr;
+
     FiberCondition() = default;
 
     void wait(FiberMutex& mutex) {
