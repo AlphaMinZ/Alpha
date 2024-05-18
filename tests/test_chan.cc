@@ -111,15 +111,17 @@ void read_3(alphaMin::Chan<int>::ptr ch_int, alphaMin::Chan<std::string>::ptr ch
     auto tmp_int = 0;
     std::string tmp_str;
     // std::pair<std::unique_ptr<int>, bool> result_int;
-    auto result_int = std::make_shared<std::pair<std::unique_ptr<int>, bool> >();
-    result_int->second = false;
+    // auto result_int = std::make_shared<std::pair<std::unique_ptr<int>, bool> >();
+    auto result_int = std::make_shared<alphaMin::result_chan<int> >();
+    // result_int->isClosed = false;
     ALPHA_LOG_INFO(g_logger) << "result_int's count is " << result_int.use_count();
     // std::pair<std::unique_ptr<std::string>, bool> result_str;
-    auto result_str = std::make_shared<std::pair<std::unique_ptr<std::string>, bool> >();
-    result_str->second = false;
+    // auto result_str = std::make_shared<std::pair<std::unique_ptr<std::string>, bool> >();
+    auto result_str = std::make_shared<alphaMin::result_chan<std::string> >();
+    // result_str->second = false;
 
     while(true) {
-        if(!result_int->second) {
+        if(!result_int->isClosed) {
             // alphaMin::IOManager::GetThis()->schedule([&ch_int, &tmp_int, cond, result_int, mutex]() {
             //     ALPHA_LOG_INFO(g_logger) << "start read ch_int====================================";
             //     ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
@@ -144,12 +146,12 @@ void read_3(alphaMin::Chan<int>::ptr ch_int, alphaMin::Chan<std::string>::ptr ch
             //     cond->notify_all();
             //     ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
             // });
-            alphaMin::select(ch_int, cond, mutex, result_int, []() {
+            alphaMin::select<int>(ch_int, cond, mutex, result_int, []() {
                 std::cout << "have read from ch_int" << std::endl;
             });
         }
 
-        if(!result_str->second) {
+        if(!result_str->isClosed) {
             // alphaMin::IOManager::GetThis()->schedule([&ch_str, &tmp_str, cond, result_str, mutex]() {
             //     ALPHA_LOG_INFO(g_logger) << "start read ch_str====================================";
             //     ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
@@ -174,7 +176,7 @@ void read_3(alphaMin::Chan<int>::ptr ch_int, alphaMin::Chan<std::string>::ptr ch
             //     cond->notify_all();
             //     ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
             // });
-            alphaMin::select(ch_str, cond, mutex, result_str, []() {
+            alphaMin::select<std::string>(ch_str, cond, mutex, result_str, []() {
                 std::cout << "have read from ch_str" << std::endl;
             });
         }
@@ -183,7 +185,7 @@ void read_3(alphaMin::Chan<int>::ptr ch_int, alphaMin::Chan<std::string>::ptr ch
         cond->wait(*mutex);
         ALPHA_LOG_INFO(g_logger) << "cond's count is " << cond.use_count();
         ALPHA_LOG_INFO(g_logger) << "已经从wait中出来了";
-        if(result_int->second && result_str->second) {
+        if(result_int->isClosed && result_str->isClosed) {
             mutex->unlock();
             ALPHA_LOG_INFO(g_logger) << "result_str's count is " << result_str.use_count();
             ALPHA_LOG_INFO(g_logger) << "result_int's count is " << result_int.use_count();
@@ -199,7 +201,7 @@ int main(int argc, char** argv) {
     auto ch_int = std::make_shared<alphaMin::Chan<int> >(2);
     auto ch_str = std::make_shared<alphaMin::Chan<std::string> >(2);
     alphaMin::IOManager iom(3);
-    
+
     ch_int->close();
     ch_str->close();
 

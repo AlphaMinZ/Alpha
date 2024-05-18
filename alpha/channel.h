@@ -12,6 +12,23 @@ namespace alphaMin {
 static alphaMin::Logger::ptr g_logger = ALPHA_LOG_NAME("system");
 
 template<class T>
+struct result_chan {
+    typedef std::shared_ptr<result_chan> ptr;
+
+    result_chan() = default;
+    
+    result_chan(typename std::unique_ptr<T> result, bool closed, bool from_me) {
+        this->result = std::move(result);
+        this->isClosed = closed;
+        this->from_me = from_me;
+    }
+
+    typename std::unique_ptr<T> result;
+    bool isClosed = false;
+    bool from_me = false;
+};
+
+template<class T>
 class Chan {
 public:
     typedef std::shared_ptr<Chan> ptr;
@@ -58,10 +75,11 @@ public:
         return true;
     }
 
-    std::pair<std::unique_ptr<T>, bool> receive() {
+    typename result_chan<T>::ptr receive() {
         ALPHA_LOG_INFO(g_logger) << "start receive";
         std::unique_ptr<T> data;
         bool closed = false;
+        bool from_me = false;
         if(m_block) {
             ALPHA_LOG_INFO(g_logger) << "need lock";
             m_mutex.lock();
@@ -78,6 +96,7 @@ public:
                 ALPHA_LOG_INFO(g_logger) << "=================";
                 data.reset(new T(std::move(m_queue.front()))); // 使用 std::unique_ptr 的构造函数
                 ALPHA_LOG_INFO(g_logger) << "=================";
+                from_me = true;
                 m_queue.pop();
                 if(!m_closed) {
                     m_notFull.notify_one();
@@ -89,21 +108,22 @@ public:
                 ALPHA_LOG_INFO(g_logger) << "data is nullptr";
             }
         } else {
-            std::pair<std::unique_ptr<T>, bool> result = tryReceive();
-            data = std::move(result.first);
-            closed = result.second;
+            auto result = tryReceive();
+            data = std::move(result->result);
+            closed = result->isClosed;
+            from_me = result->from_me;
         }
         ALPHA_LOG_INFO(g_logger) << "need to return";
-        return std::make_pair(std::move(data), closed);
+        return std::make_shared<result_chan<T> >(std::move(data), closed, from_me);
     }
 
-    std::pair<std::unique_ptr<T>, bool> tryReceive() {
+    typename result_chan<T>::ptr tryReceive() {
         std::unique_ptr<T> data;
         bool closed = false;
         m_mutex.lock();
         if(m_queue.empty() && !m_closed) {
             m_mutex.unlock();
-            return std::make_pair(std::move(data), closed);
+            return std::make_shared<result_chan<T> >(std::move(data), closed, true);
         } else if(m_queue.empty() && m_closed) {
             closed = true;
             data = nullptr; // 返回一个空指针
@@ -112,7 +132,7 @@ public:
             m_queue.pop();
         }
         m_mutex.unlock();
-        return std::make_pair(std::move(data), closed);
+        return std::make_shared<result_chan<T> >(std::move(data), closed, true);
     }
 
     // close chan
@@ -149,13 +169,15 @@ private:
 
 template<typename T>
 void select(typename Chan<T>::ptr channel, FiberCondition::ptr cond, 
-            FiberMutex::ptr mutex, typename std::shared_ptr<std::pair<std::unique_ptr<T>, bool> > result_ch, 
+            FiberMutex::ptr mutex, typename result_chan<T>::ptr result_ch, 
             std::function<void()> fc) {
     IOManager::GetThis()->schedule([channel, cond, mutex, result_ch, fc]() {
-        std::pair<std::unique_ptr<T>, bool> result = channel->receive();
+        auto result = channel->receive();
 
         mutex->lock();
-        *result_ch = std::move(result);
+        result_ch->result = std::move(result->result);
+        result_ch->isClosed = result->isClosed;
+        result_ch->from_me = result->from_me;
         mutex->unlock();
 
         fc();
