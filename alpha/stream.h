@@ -59,7 +59,7 @@ public:
      *      @retval =0 被关闭
      *      @retval <0 出现流错误
      */
-    virtual int readFixSize(ByteArray::ptr ba, size_t length);
+    virtual int readFixSize(ByteArray::ptr ba, size_t length); 
 
     /**
      * @brief 写数据

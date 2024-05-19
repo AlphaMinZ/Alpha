@@ -17,6 +17,20 @@ int SocketStream::read(void* buffer, size_t length) {
     if(!isConnection()) {
         return -1;
     }
+    if(!m_remainingBuffer.empty()) {
+        int toRead = 0;
+        if(length <= m_remainingBuffer.size()) {
+            toRead = length;
+            memcpy(buffer, m_remainingBuffer.data(), toRead);
+            m_remainingBuffer.erase(m_remainingBuffer.begin(), m_remainingBuffer.begin() + toRead);
+            return toRead;
+        } else {
+            toRead = length - m_remainingBuffer.size();
+            memcpy(buffer, m_remainingBuffer.data(), m_remainingBuffer.size());
+            m_remainingBuffer.clear();
+            read(buffer + (length - toRead), toRead);
+        }
+    }
     return m_socket->recv(buffer, length);
 } 
 
@@ -31,6 +45,41 @@ int SocketStream::read(ByteArray::ptr ba, size_t length) {
         ba->setPosition(ba->getPosition() + rt);
     }
     return rt;
+}
+
+int SocketStream::readUntil(std::string& output, char delimiter) {
+    char buffer[1024];
+    output.clear();
+    int totalBytes = 0;
+
+    while(true) {
+        int64_t len = read(buffer, sizeof(buffer));
+        if(len < 0) {
+            // 发生错误
+            return -1;
+        } else if(len == 0) {
+            // 连接关闭
+            return totalBytes;
+        }
+
+        for(int i = 0; i < len; ++i) {
+            if(buffer[i] == delimiter) {
+                output.append(buffer, i + 1);
+                if(i + 1 < len) {
+                    m_remainingBuffer.assign(buffer + i + 1, buffer + len);
+                }
+                return totalBytes + i + 1;
+            }
+        }
+
+        output.append(buffer, len);
+        totalBytes += len;
+        if(len != sizeof(buffer)) {
+            break;
+        }
+    }
+
+    return totalBytes;
 }
 
 int SocketStream::write(const void* buffer, size_t length) {
