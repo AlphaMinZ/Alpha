@@ -26,11 +26,13 @@ RpcClient::~RpcClient() {
 
 void RpcClient::connect() {
     ALPHA_LOG_INFO(g_rpclogger) << "RpcClient[" << m_name.c_str() << "] - connecting to " << m_serverAddr->getAddr()->sa_data;
-    m_connect = true;
     if(m_sock->connect(m_serverAddr)) {
+        m_connect = true;
         ALPHA_LOG_INFO(g_rpclogger) << "RpcClient connect succ";
     } else {
         ALPHA_LOG_ERROR(g_rpclogger) << "RpcClient connect failed";
+        m_connect = false;
+        // getCond().notify_one();
         return;
     }
 
@@ -38,9 +40,9 @@ void RpcClient::connect() {
     // auto sock = getMySock();
 
     IOManager::GetThis()->addEvent(m_sock->getSocket(), IOManager::READ, [self]() {
-        std::cout << "hahahahahahahahahaha";
+        // std::cout << "hahahahahahahahahaha";
         self->getMessageCallback()(self->getMySock());
-        std::cout << "hahahahahahahahahaha";
+        // std::cout << "hahahahahahahahahaha";
         self->getCond().notify_one();
     });
 

@@ -17,6 +17,8 @@ message LoginRequest {
 message LoginResponse {
     ResultCode result = 1;
     bool success = 2;
+    string test_name_1 = 3;
+    bytes test_name_4 = 4;
 }
 
 service UserServiceRpc {

@@ -33,6 +33,8 @@ public:
         code->set_errcode(0);
         code->set_errmsg("");
         response->set_success(res);
+        response->set_test_name_1("alphaMin");
+        response->set_test_name_4("fuck you");
 
         done->Run();
     }

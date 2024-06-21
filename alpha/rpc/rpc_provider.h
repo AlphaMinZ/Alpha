@@ -64,6 +64,7 @@ private:
 
     using ServiceMap = std::unordered_map<std::string, ServiceInfo>;
     ServiceMap m_serviceMap; // 注册成功的服务对象和服务方法
+    ZkClientRPC m_zkClient;
 };
 
 }

@@ -26,7 +26,7 @@ public:
 
     FiberMutex& getMutex() { return m_mutex;}
     FiberCondition& getCond() { return m_cond;}
-
+    bool isConnected() { return m_connect;}
     void connect();
 
     void close();

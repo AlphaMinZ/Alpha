@@ -52,6 +52,8 @@ public:
      */
     std::string getData(const std::string& path);
 
+    int32_t close();
+
 private:
     zhandle_t* m_zkHandler; // zookeeper句柄
 };

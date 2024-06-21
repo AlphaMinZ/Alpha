@@ -101,8 +101,15 @@ void RpcChannelImpl::CallMethod(
     ALPHA_LOG_INFO(g_rpclogger) << "++++++++++==";
     client->connect();
     ALPHA_LOG_INFO(g_rpclogger) << "============";
-    client->getCond().wait(client->getMutex());
+    
     // sleep(3);
+
+    if(!client->isConnected()) {
+        ALPHA_LOG_INFO(g_rpclogger) << "connection rpc server failed";
+        return;
+    }
+
+    client->getCond().wait(client->getMutex());
 
     ALPHA_LOG_INFO(g_rpclogger) << "close connection by RpcProvider";
 
@@ -130,8 +137,23 @@ void RpcChannelImpl::onMessage(const Socket::ptr& conn) {
     // 接受RPC应答
     ALPHA_LOG_INFO(g_rpclogger) << "jieshou";
     SocketStream ss(conn);
-    ss.read(&m_result, m_result.size());
+    std::string responStr;
+    responStr.resize(128);
+    ss.read(&responStr[0], 128);
+
+    std::vector<unsigned char> sizeBytes(4);
+    std::copy(responStr.begin(), responStr.begin() + 4, sizeBytes.begin());
+
+    size_t responSize = 
+        (static_cast<size_t>(sizeBytes[0]) << 24) |
+        (static_cast<size_t>(sizeBytes[1]) << 16) |
+        (static_cast<size_t>(sizeBytes[2]) << 8)  |
+         static_cast<size_t>(sizeBytes[3]);
+
+    m_result = responStr.substr(4, responSize);
+
     ALPHA_LOG_INFO(g_rpclogger) << "receive response from RpcProvider: " << m_result;
+    ALPHA_LOG_INFO(g_rpclogger) <<  m_result << " " << m_result.size();
     // conn->cancelAll();
     conn->close();
 }

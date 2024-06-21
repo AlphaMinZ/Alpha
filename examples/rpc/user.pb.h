@@ -519,9 +519,39 @@ class LoginResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kTestName1FieldNumber = 3,
+    kTestName4FieldNumber = 4,
     kResultFieldNumber = 1,
     kSuccessFieldNumber = 2,
   };
+  // string test_name_1 = 3;
+  void clear_test_name_1();
+  const std::string& test_name_1() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_test_name_1(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_test_name_1();
+  PROTOBUF_NODISCARD std::string* release_test_name_1();
+  void set_allocated_test_name_1(std::string* test_name_1);
+  private:
+  const std::string& _internal_test_name_1() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_test_name_1(const std::string& value);
+  std::string* _internal_mutable_test_name_1();
+  public:
+
+  // bytes test_name_4 = 4;
+  void clear_test_name_4();
+  const std::string& test_name_4() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_test_name_4(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_test_name_4();
+  PROTOBUF_NODISCARD std::string* release_test_name_4();
+  void set_allocated_test_name_4(std::string* test_name_4);
+  private:
+  const std::string& _internal_test_name_4() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_test_name_4(const std::string& value);
+  std::string* _internal_mutable_test_name_4();
+  public:
+
   // .fixbug.ResultCode result = 1;
   bool has_result() const;
   private:
@@ -557,6 +587,8 @@ class LoginResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr test_name_1_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr test_name_4_;
     ::fixbug::ResultCode* result_;
     bool success_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -920,6 +952,106 @@ inline void LoginResponse::_internal_set_success(bool value) {
 inline void LoginResponse::set_success(bool value) {
   _internal_set_success(value);
   // @@protoc_insertion_point(field_set:fixbug.LoginResponse.success)
+}
+
+// string test_name_1 = 3;
+inline void LoginResponse::clear_test_name_1() {
+  _impl_.test_name_1_.ClearToEmpty();
+}
+inline const std::string& LoginResponse::test_name_1() const {
+  // @@protoc_insertion_point(field_get:fixbug.LoginResponse.test_name_1)
+  return _internal_test_name_1();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LoginResponse::set_test_name_1(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.test_name_1_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:fixbug.LoginResponse.test_name_1)
+}
+inline std::string* LoginResponse::mutable_test_name_1() {
+  std::string* _s = _internal_mutable_test_name_1();
+  // @@protoc_insertion_point(field_mutable:fixbug.LoginResponse.test_name_1)
+  return _s;
+}
+inline const std::string& LoginResponse::_internal_test_name_1() const {
+  return _impl_.test_name_1_.Get();
+}
+inline void LoginResponse::_internal_set_test_name_1(const std::string& value) {
+  
+  _impl_.test_name_1_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LoginResponse::_internal_mutable_test_name_1() {
+  
+  return _impl_.test_name_1_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LoginResponse::release_test_name_1() {
+  // @@protoc_insertion_point(field_release:fixbug.LoginResponse.test_name_1)
+  return _impl_.test_name_1_.Release();
+}
+inline void LoginResponse::set_allocated_test_name_1(std::string* test_name_1) {
+  if (test_name_1 != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.test_name_1_.SetAllocated(test_name_1, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.test_name_1_.IsDefault()) {
+    _impl_.test_name_1_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:fixbug.LoginResponse.test_name_1)
+}
+
+// bytes test_name_4 = 4;
+inline void LoginResponse::clear_test_name_4() {
+  _impl_.test_name_4_.ClearToEmpty();
+}
+inline const std::string& LoginResponse::test_name_4() const {
+  // @@protoc_insertion_point(field_get:fixbug.LoginResponse.test_name_4)
+  return _internal_test_name_4();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void LoginResponse::set_test_name_4(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.test_name_4_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:fixbug.LoginResponse.test_name_4)
+}
+inline std::string* LoginResponse::mutable_test_name_4() {
+  std::string* _s = _internal_mutable_test_name_4();
+  // @@protoc_insertion_point(field_mutable:fixbug.LoginResponse.test_name_4)
+  return _s;
+}
+inline const std::string& LoginResponse::_internal_test_name_4() const {
+  return _impl_.test_name_4_.Get();
+}
+inline void LoginResponse::_internal_set_test_name_4(const std::string& value) {
+  
+  _impl_.test_name_4_.Set(value, GetArenaForAllocation());
+}
+inline std::string* LoginResponse::_internal_mutable_test_name_4() {
+  
+  return _impl_.test_name_4_.Mutable(GetArenaForAllocation());
+}
+inline std::string* LoginResponse::release_test_name_4() {
+  // @@protoc_insertion_point(field_release:fixbug.LoginResponse.test_name_4)
+  return _impl_.test_name_4_.Release();
+}
+inline void LoginResponse::set_allocated_test_name_4(std::string* test_name_4) {
+  if (test_name_4 != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.test_name_4_.SetAllocated(test_name_4, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.test_name_4_.IsDefault()) {
+    _impl_.test_name_4_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:fixbug.LoginResponse.test_name_4)
 }
 
 #ifdef __GNUC__

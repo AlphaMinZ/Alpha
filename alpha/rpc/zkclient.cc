@@ -107,6 +107,15 @@ std::string ZkClientRPC::getData(const std::string& path) {
     return buffer;
 }
 
+int32_t ZkClientRPC::close() {
+    int32_t rt = ZOK;
+    if(m_zkHandler) {
+        rt = zookeeper_close(m_zkHandler);
+        m_zkHandler = nullptr;
+    }
+    return rt;
+}
+
 }
 
 }

@@ -14,7 +14,9 @@ using namespace google::protobuf;
 
 RpcProvider::RpcProvider() {}
 
-RpcProvider::~RpcProvider() {}
+RpcProvider::~RpcProvider() {
+    m_zkClient.close();
+}
 
 void RpcProvider::notifyService(Service* service) {
     // 获取服务对象的描述信息
@@ -58,21 +60,21 @@ void RpcProvider::run() {
     
     ALPHA_LOG_INFO(g_rpclogger) << "绑定回调结束";
 
-    ZkClientRPC::ptr zkCli = std::make_shared<ZkClientRPC>();
-    zkCli->start();
+    // ZkClientRPC::ptr zkCli = std::make_shared<ZkClientRPC>();
+    m_zkClient.start();
     ALPHA_LOG_INFO(g_rpclogger) << "zkclient 开始";
     // 将当前RPC节点上要发布的服务全部注册到zookeeper中 让RpcClient可以在zookeeper上发现服务
     std::string new_path;
     new_path.resize(128);
     for(auto& service : m_serviceMap) {
         std::string service_path = "/" + service.first;
-        zkCli->create(service_path, "", 0);
+        m_zkClient.create(service_path, "", 0);
         for(auto& method : service.second.methodMap) {
             std::string method_path = service_path + "/" + method.first;
             ALPHA_LOG_INFO(g_rpclogger) << "********************************";
             std::string method_data = "127.0.0.1:8000";
 
-            zkCli->create(method_path.c_str(), method_data, 0);
+            m_zkClient.create(method_path.c_str(), method_data, ZOO_EPHEMERAL);
         }
     }
 
@@ -163,8 +165,21 @@ void RpcProvider::sendRpcResponse(const Socket::ptr& conn, Message* response) {
 
     std::string responseStr;
     if(response->SerializeToString(&responseStr)) {
+        ALPHA_LOG_ERROR(g_rpclogger) << responseStr << " " << responseStr.size();
         // 通过网络将RPC方法执行的结果发送回RPC的调用方
-        conn->send(responseStr.c_str(), responseStr.size());
+        size_t responSize = responseStr.size();
+
+        std::string packet;
+        packet.reserve(4 + responSize);
+        char sizeBuffer[4];
+        sizeBuffer[0] = (responSize >> 24) & 0xFF;
+        sizeBuffer[1] = (responSize >> 16) & 0xFF;
+        sizeBuffer[2] = (responSize >>  8) & 0xFF;
+        sizeBuffer[3] = responSize & 0xFF;
+
+        packet.append(reinterpret_cast<char*>(&sizeBuffer), 4);
+        packet.append(responseStr);
+        conn->send(packet.c_str(), packet.size());
     } else {
         ALPHA_LOG_ERROR(g_rpclogger) << "failed to serial string";
     }

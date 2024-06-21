@@ -51,7 +51,9 @@ struct LoginRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoginRequestDefaultTypeInternal _LoginRequest_default_instance_;
 PROTOBUF_CONSTEXPR LoginResponse::LoginResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.result_)*/nullptr
+    /*decltype(_impl_.test_name_1_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.test_name_4_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.result_)*/nullptr
   , /*decltype(_impl_.success_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoginResponseDefaultTypeInternal {
@@ -93,6 +95,8 @@ const uint32_t TableStruct_user_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(pro
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::fixbug::LoginResponse, _impl_.result_),
   PROTOBUF_FIELD_OFFSET(::fixbug::LoginResponse, _impl_.success_),
+  PROTOBUF_FIELD_OFFSET(::fixbug::LoginResponse, _impl_.test_name_1_),
+  PROTOBUF_FIELD_OFFSET(::fixbug::LoginResponse, _impl_.test_name_4_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::fixbug::ResultCode)},
@@ -109,15 +113,16 @@ static const ::_pb::Message* const file_default_instances[] = {
 const char descriptor_table_protodef_user_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\nuser.proto\022\006fixbug\"-\n\nResultCode\022\017\n\007er"
   "rcode\030\001 \001(\005\022\016\n\006errmsg\030\002 \001(\014\")\n\014LoginRequ"
-  "est\022\014\n\004name\030\001 \001(\014\022\013\n\003pwd\030\002 \001(\014\"D\n\rLoginR"
+  "est\022\014\n\004name\030\001 \001(\014\022\013\n\003pwd\030\002 \001(\014\"n\n\rLoginR"
   "esponse\022\"\n\006result\030\001 \001(\0132\022.fixbug.ResultC"
-  "ode\022\017\n\007success\030\002 \001(\0102F\n\016UserServiceRpc\0224"
-  "\n\005Login\022\024.fixbug.LoginRequest\032\025.fixbug.L"
-  "oginResponseB\003\200\001\001b\006proto3"
+  "ode\022\017\n\007success\030\002 \001(\010\022\023\n\013test_name_1\030\003 \001("
+  "\t\022\023\n\013test_name_4\030\004 \001(\0142F\n\016UserServiceRpc"
+  "\0224\n\005Login\022\024.fixbug.LoginRequest\032\025.fixbug"
+  ".LoginResponseB\003\200\001\001b\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_user_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_user_2eproto = {
-    false, false, 265, descriptor_table_protodef_user_2eproto,
+    false, false, 307, descriptor_table_protodef_user_2eproto,
     "user.proto",
     &descriptor_table_user_2eproto_once, nullptr, 0, 3,
     schemas, file_default_instances, TableStruct_user_2eproto::offsets,
@@ -621,11 +626,29 @@ LoginResponse::LoginResponse(const LoginResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   LoginResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.result_){nullptr}
+      decltype(_impl_.test_name_1_){}
+    , decltype(_impl_.test_name_4_){}
+    , decltype(_impl_.result_){nullptr}
     , decltype(_impl_.success_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.test_name_1_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.test_name_1_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_test_name_1().empty()) {
+    _this->_impl_.test_name_1_.Set(from._internal_test_name_1(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.test_name_4_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.test_name_4_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_test_name_4().empty()) {
+    _this->_impl_.test_name_4_.Set(from._internal_test_name_4(), 
+      _this->GetArenaForAllocation());
+  }
   if (from._internal_has_result()) {
     _this->_impl_.result_ = new ::fixbug::ResultCode(*from._impl_.result_);
   }
@@ -638,10 +661,20 @@ inline void LoginResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.result_){nullptr}
+      decltype(_impl_.test_name_1_){}
+    , decltype(_impl_.test_name_4_){}
+    , decltype(_impl_.result_){nullptr}
     , decltype(_impl_.success_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
+  _impl_.test_name_1_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.test_name_1_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.test_name_4_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.test_name_4_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 LoginResponse::~LoginResponse() {
@@ -655,6 +688,8 @@ LoginResponse::~LoginResponse() {
 
 inline void LoginResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.test_name_1_.Destroy();
+  _impl_.test_name_4_.Destroy();
   if (this != internal_default_instance()) delete _impl_.result_;
 }
 
@@ -668,6 +703,8 @@ void LoginResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  _impl_.test_name_1_.ClearToEmpty();
+  _impl_.test_name_4_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.result_ != nullptr) {
     delete _impl_.result_;
   }
@@ -694,6 +731,25 @@ const char* LoginResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext*
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _impl_.success_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string test_name_1 = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_test_name_1();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "fixbug.LoginResponse.test_name_1"));
+        } else
+          goto handle_unusual;
+        continue;
+      // bytes test_name_4 = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_test_name_4();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -740,6 +796,22 @@ uint8_t* LoginResponse::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_success(), target);
   }
 
+  // string test_name_1 = 3;
+  if (!this->_internal_test_name_1().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_test_name_1().data(), static_cast<int>(this->_internal_test_name_1().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "fixbug.LoginResponse.test_name_1");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_test_name_1(), target);
+  }
+
+  // bytes test_name_4 = 4;
+  if (!this->_internal_test_name_4().empty()) {
+    target = stream->WriteBytesMaybeAliased(
+        4, this->_internal_test_name_4(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -755,6 +827,20 @@ size_t LoginResponse::ByteSizeLong() const {
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // string test_name_1 = 3;
+  if (!this->_internal_test_name_1().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_test_name_1());
+  }
+
+  // bytes test_name_4 = 4;
+  if (!this->_internal_test_name_4().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_test_name_4());
+  }
 
   // .fixbug.ResultCode result = 1;
   if (this->_internal_has_result()) {
@@ -786,6 +872,12 @@ void LoginResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (!from._internal_test_name_1().empty()) {
+    _this->_internal_set_test_name_1(from._internal_test_name_1());
+  }
+  if (!from._internal_test_name_4().empty()) {
+    _this->_internal_set_test_name_4(from._internal_test_name_4());
+  }
   if (from._internal_has_result()) {
     _this->_internal_mutable_result()->::fixbug::ResultCode::MergeFrom(
         from._internal_result());
@@ -809,7 +901,17 @@ bool LoginResponse::IsInitialized() const {
 
 void LoginResponse::InternalSwap(LoginResponse* other) {
   using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.test_name_1_, lhs_arena,
+      &other->_impl_.test_name_1_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.test_name_4_, lhs_arena,
+      &other->_impl_.test_name_4_, rhs_arena
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(LoginResponse, _impl_.success_)
       + sizeof(LoginResponse::_impl_.success_)

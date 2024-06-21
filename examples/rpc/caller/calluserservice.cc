@@ -21,6 +21,10 @@ void run() {
         // RPC 调用完成 读取结果
         if(response.result().errcode() == 0) {
             ALPHA_LOG_INFO(g_logger) << "rpc login response: " << response.success();
+            std::string test_name_4 = response.test_name_4();
+            std::string test_name_1 = response.test_name_1();
+            ALPHA_LOG_INFO(g_logger) << "rpc test_name: " << test_name_1 << " " << test_name_1.size(); 
+            ALPHA_LOG_INFO(g_logger) << "rpc test_name: " << test_name_4 << " " << test_name_4.size(); 
         } else {
             ALPHA_LOG_ERROR(g_logger) << "failed to rpc login: " << response.result().errmsg();
         }
