@@ -1,6 +1,7 @@
 #include "tcp_server.h"
 #include "config.h"
 #include "log.h"
+#include "socket_stream.h"
 
 namespace alphaMin {
 
@@ -77,10 +78,12 @@ bool TcpServer::bind(const std::vector<Address::ptr>& addrs
 }
 
 void TcpServer::startAccept(Socket::ptr sock) {
+    ALPHA_LOG_DEBUG(g_logger) << "TcpServer::startAccept start";
     while(!m_isStop) {
         Socket::ptr client = sock->accept();
         if(client) {
             client->setRecvTimeout(m_recvTimeout);
+            ALPHA_LOG_DEBUG(g_logger) << "TcpServer::startAccept handleClient";
             m_ioWorker->schedule(std::bind(&TcpServer::handleClient,
                         shared_from_this(), client));
         } else {
@@ -91,14 +94,18 @@ void TcpServer::startAccept(Socket::ptr sock) {
 }
 
 bool TcpServer::start() {
+    ALPHA_LOG_DEBUG(g_logger) << "TcpServer::start start";
     if(!m_isStop) {
         return true;
     }
     m_isStop = false;
     for(auto& sock : m_socks) {
+        ALPHA_LOG_DEBUG(g_logger) << "TcpServer::start startAccept_1";
         m_acceptWorker->schedule(std::bind(&TcpServer::startAccept,
                     shared_from_this(), sock));
+        ALPHA_LOG_DEBUG(g_logger) << "TcpServer::start startAccept_2";
     }
+    ALPHA_LOG_DEBUG(g_logger) << "TcpServer::start stop";
     return true;
 }
 
@@ -114,8 +121,33 @@ void TcpServer::stop() {
     });
 }
 
+
+
+// static void Message(const alphaMin::Socket::ptr& conn) {
+//     SocketStream ss(conn);
+//     std::string message;
+//     message.resize(128);
+//     ss.read(&message[0], 128);
+
+//     ALPHA_LOG_INFO(g_logger) << message;
+
+//     sleep(5);
+//     conn->send("hello client", 12);
+//     bool isConnection = conn->isConnected();
+//     if(isConnection) {
+//         std::cout << "connectioned\n";
+//     }
+// }
+
 void TcpServer::handleClient(Socket::ptr client) {
     ALPHA_LOG_INFO(g_logger) << "handleClient: " << *client;
+
+    auto self = shared_from_this();
+
+    // m_ioWorker->addEvent(client->getSocket(), IOManager::READ, [&self, client]() {
+    //     // self->getMessageCallback()(client);
+    //     Message(client);
+    // });
 }
 
 bool TcpServer::loadCertificates(const std::string& cert_file, const std::string& key_file) {

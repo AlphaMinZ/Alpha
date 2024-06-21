@@ -46,13 +46,16 @@ public:
     FiberCondition() = default;
 
     void wait(FiberMutex& mutex) {
+        ALPHA_LOG_INFO(m_logger) << "wait start";
         m_waiting.push_back(Fiber::GetThis()); // 将当前协程添加到等待队列中
         mutex.unlock();
         Fiber::YieldToHold();
         mutex.lock();
+        ALPHA_LOG_INFO(m_logger) << "wait stop";
     }
 
     void notify_one() {
+        ALPHA_LOG_INFO(m_logger) << "notify_one";
         if(!m_waiting.empty()) {
             auto next = m_waiting.front();
             m_waiting.pop_front();
@@ -72,6 +75,7 @@ public:
 
 private:
     std::list<Fiber::ptr> m_waiting; // 等待队列
+    Logger::ptr m_logger = ALPHA_LOG_NAME("cond");
 };
 
 class WaitGroup {

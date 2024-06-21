@@ -5,7 +5,7 @@
 alphaMin::Logger::ptr g_logger = ALPHA_LOG_ROOT();
 
 void run() {
-    auto addr = alphaMin::Address::LookupAny("0.0.0.0:8022");
+    auto addr = alphaMin::Address::LookupAny("127.0.0.1:8000");
     //auto addr2 = alphaMin::UnixAddress::ptr(new alphaMin::UnixAddress("/tmp/unix_addr"));
     std::vector<alphaMin::Address::ptr> addrs;
     addrs.push_back(addr);
@@ -16,6 +16,7 @@ void run() {
     while(!tcp_server->bind(addrs, fails)) {
         sleep(2);
     }
+    ALPHA_LOG_DEBUG(g_logger) << "statr";
     tcp_server->start();
     
 }

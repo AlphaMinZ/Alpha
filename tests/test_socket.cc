@@ -145,7 +145,7 @@ void test_server() {
 
 void test_client() {
     ALPHA_LOG_INFO(g_looger) << "client start";
-    alphaMin::IPAddress::ptr addr = alphaMin::IPAddress::Create("127.0.0.1", 9527);
+    alphaMin::IPAddress::ptr addr = alphaMin::IPAddress::Create("127.0.0.1", 8000);
     if(addr) {
         ALPHA_LOG_INFO(g_looger) << "get address: " << addr->toString();
     } else {
@@ -167,9 +167,19 @@ void test_client() {
         ALPHA_LOG_INFO(g_looger) << "send fail rt=" << rt;
         return;
     }
-
     sleep(2);
 
+    bool isConnection = client_sock->isConnected();
+    if(isConnection) {
+        ALPHA_LOG_INFO(g_looger) << "connectioned";
+    }
+
+    // std::string buffer;
+    // buffer.resize(1024);
+    // client_sock->recv(&buffer[0], buffer.size());
+    // ALPHA_LOG_INFO(g_looger) << "from client: " << buffer.size() << buffer;
+
+    sleep(2);
     rt = client_sock->send(buff, sizeof(buff));
     if(rt <= 0) {
         ALPHA_LOG_INFO(g_looger) << "send fail rt=" << rt;
@@ -177,22 +187,23 @@ void test_client() {
     }
 
     sleep(2);
+    std::string buffe;
+    buffe.resize(1024);
+    client_sock->recv(&buffe[0], buffe.size());
+    ALPHA_LOG_INFO(g_looger) << "from client: " << buffe.size() << buffe; 
 
-    rt = client_sock->send(buff, sizeof(buff));
-
-    if(rt <= 0) {
-        ALPHA_LOG_INFO(g_looger) << "send fail rt=" << rt;
-        return;
-    }
+    ALPHA_LOG_INFO(g_looger) << "over";
 }
 
 int main(int argc, char** argv) {
-    alphaMin::IOManager iom(2);
+    // alphaMin::IOManager iom(2);
     // iom.schedule(&test_socket);
     // iom.schedule(&test2);
-    iom.schedule(&test_server);
+    // iom.schedule(&test_server);
     // sleep(2);
-    iom.schedule(&test_client);
+    // iom.schedule(&test_client);
+    test_client();
+    // test_client();
     // test_server();
     return 0;
 }

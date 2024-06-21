@@ -184,6 +184,7 @@ public:
     virtual std::string toString(const std::string& prefix = "");
 
     std::vector<Socket::ptr> getSocks() const { return m_socks;}
+
 protected:
 
     /**

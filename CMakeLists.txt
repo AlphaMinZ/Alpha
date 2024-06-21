@@ -13,6 +13,7 @@ file(GLOB SRC
     ${CMAKE_CURRENT_SOURCE_DIR}/alpha/*.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/alpha/http/*.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/alpha/db/*.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/alpha/rpc/*.cc
 )
 
 set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib)
@@ -35,7 +36,14 @@ if(OPENSSL_FOUND)
     include_directories(${OPENSSL_INCLUDE_DIR})
 endif()
 
+set(Protobuf_INCLUDE_DIR "/usr/local/protobuf/include")
+set(Protobuf_LIBRARIES "/usr/local/protobuf/lib/libprotobuf.so")
+
+include_directories(${Protobuf_INCLUDE_DIR})
+
 find_library(PTHREAD pthread)
+
+# protobufmaker(alpha/rpc/rpcheader.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
 
 set(
     LIB_LIB
@@ -43,7 +51,9 @@ set(
     yaml-cpp
     dl
     mysqlclient
+    zookeeper_mt
     ${OPENSSL_LIBRARIES}
+    ${Protobuf_LIBRARIES}
 )
 
 # add_executable(test_thread tests/test_thread.cc ${SRC})
@@ -106,11 +116,23 @@ set(
 # add_executable(test_fiber_cond tests/test_fiber_cond.cc ${SRC})
 # target_link_libraries(test_fiber_cond ${LIB_LIB})
 
-add_executable(test_chan tests/test_chan.cc ${SRC})
-target_link_libraries(test_chan ${LIB_LIB})
+# add_executable(test_chan tests/test_chan.cc ${SRC})
+# target_link_libraries(test_chan ${LIB_LIB})
 
 # add_executable(test_pool tests/test_pool.cc ${SRC})
 # target_link_libraries(test_pool ${LIB_LIB})
+
+# add_executable(test_zk tests/test_zookeeper.cc ${SRC})
+# target_link_libraries(test_zk ${LIB_LIB})
+
+# add_executable(test_rpc tests/test_rpc.cc ${SRC})
+# target_link_libraries(test_rpc ${LIB_LIB})
+
+add_executable(test_rpc_caller examples/rpc/caller/calluserservice.cc ${SRC} examples/rpc/user.pb.cc)
+target_link_libraries(test_rpc_caller ${LIB_LIB})
+
+add_executable(test_rpc_callee examples/rpc/callee/userservice.cc ${SRC} examples/rpc/user.pb.cc)
+target_link_libraries(test_rpc_callee ${LIB_LIB})
 
 SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 SET(CMAKE_BUILD_TYPE "Debug")  # 定义编译类型

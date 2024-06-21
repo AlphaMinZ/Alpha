@@ -14,6 +14,7 @@
 #include <iostream>
 #include <iostream>
 #include <boost/lexical_cast.hpp>
+#include <google/protobuf/message.h>
 
 namespace alphaMin {
 
@@ -222,6 +223,20 @@ template<class T>
 const char* TypeToName() {
     static const char* s_name = abi::__cxa_demangle(typeid(T).name(), nullptr, nullptr, nullptr);
     return s_name;
+}
+
+std::string PBToJsonString(const google::protobuf::Message& message);
+
+template<class Iter>
+std::string Join(Iter begin, Iter end, const std::string& tag) {
+    std::stringstream ss;
+    for(Iter it = begin; it != end; ++it) {
+        if(it != begin) {
+            ss << tag;
+        }
+        ss << *it;
+    }
+    return ss.str();
 }
 
 }
