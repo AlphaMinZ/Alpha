@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+package GameX;
+
+option cc_generic_services = true;
+

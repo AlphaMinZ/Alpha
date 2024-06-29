@@ -13,20 +13,22 @@ void run() {
     fixbug::LoginResponse response;
     // RPC 同步调用
     alphaMin::rpc::RpcControllerImpl controller;
-    stub.Login(&controller, &request, &response, nullptr);
+    for(int i = 0; i < 1000; ++i) {
+        stub.Login(&controller, &request, &response, nullptr);
 
-    if(controller.Failed()) {
-        ALPHA_LOG_ERROR(g_logger) << controller.ErrorText();
-    } else {
-        // RPC 调用完成 读取结果
-        if(response.result().errcode() == 0) {
-            ALPHA_LOG_INFO(g_logger) << "rpc login response: " << response.success();
-            std::string test_name_4 = response.test_name_4();
-            std::string test_name_1 = response.test_name_1();
-            ALPHA_LOG_INFO(g_logger) << "rpc test_name: " << test_name_1 << " " << test_name_1.size(); 
-            ALPHA_LOG_INFO(g_logger) << "rpc test_name: " << test_name_4 << " " << test_name_4.size(); 
+        if(controller.Failed()) {
+            ALPHA_LOG_ERROR(g_logger) << controller.ErrorText();
         } else {
-            ALPHA_LOG_ERROR(g_logger) << "failed to rpc login: " << response.result().errmsg();
+            // RPC 调用完成 读取结果
+            if(response.result().errcode() == 0) {
+                ALPHA_LOG_INFO(g_logger) << "rpc login response: " << response.success();
+                std::string test_name_4 = response.test_name_4();
+                std::string test_name_1 = response.test_name_1();
+                ALPHA_LOG_INFO(g_logger) << "rpc test_name: " << test_name_1 << " " << test_name_1.size(); 
+                ALPHA_LOG_INFO(g_logger) << "rpc test_name: " << test_name_4 << " " << test_name_4.size(); 
+            } else {
+                ALPHA_LOG_ERROR(g_logger) << "failed to rpc login: " << response.result().errmsg();
+            }
         }
     }
 }

@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package GameX;
+
+option cc_generic_services = true;
+
+message CSGatewayLogin {
+    uint64 userid = 1;
+    string token = 2;
+    string platName = 3;
+    int32 zoneId = 4;
+}
+
+enum GatewayErr {
+  Unknown        = 0;
+  Success        = 1; // 成功
+  Verify         = 2; // 登录验证失败
+  RepeatedVerify = 3; // 重复验证
+  Closed         = 4; // 系统关门维护中
+  LoseCurCon     = 5; // 当前连接不在了
+  DisCurConn     = 6; // 当前连接没有断开
+  BeingReConn    = 7; // 正在重连
+  ZoneIdError    = 8; // 区错误
+}
+
+message SCGatewayLogin {
+    uint32 errCode = 1; // 1，成功，2，登录验证失败, 3, 重复验证, 4，系统关门维护中;
+    uint64 userid = 2;
+    string name = 3;
+    int32 sceneId = 4;
+    int32 zoneId = 5;
+}
+
+message CSGatewayLogout {
+  uint64 userId	  = 1;
+  string token	  = 2;
+  string platName = 3;
+}
